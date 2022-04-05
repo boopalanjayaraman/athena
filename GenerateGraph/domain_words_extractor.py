@@ -1,5 +1,3 @@
-from lib2to3.pygram import Symbols
-from unittest import result
 import numpy as np
 import pandas as pd
 import logging
@@ -13,10 +11,14 @@ nltk.download('stopwords')
 nltk.download('punkt')
 
 class DomainWordsExtractor : 
+    """This class is to go through a given full-dataset and understand the most used common words in order to create a list of domain relationships and nouns for the graph."""
 
     symbolList = ['`','~', '!','@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '[', '}', ']', '|', '\\', ':', ';', '"', '\'',',', '<', '.', '>', '?', '/' ]
 
     def __init__(self, config, logger) -> None:
+        """
+        constructor method. Config and Logger instances have to be passed on from the caller.
+        """
         self.config = config
         self.logger = logger
 
@@ -29,7 +31,9 @@ class DomainWordsExtractor :
         self.logger.info("DomainWordsExtractor initialized.")
 
     def extract_domain_words(self, input_file_path, should_log=False, do_full_set=False):
-
+        """
+        Extracts the domain words on a given file.
+        """
         if input_file_path == None or input_file_path == '':
             input_file_path = self.config['InputDataSettings']['InputDataSetFile']
         
@@ -63,9 +67,9 @@ class DomainWordsExtractor :
 
         #fetch only the most common used words
         result_dict = {}
-        result_dict['VerbsList'] = verb_counter.most_common(self.most_common_count)
-        result_dict['NounsList'] = noun_counter.most_common(self.most_common_count)
-        result_dict['PropsList'] = prop_counter.most_common(self.most_common_count)
+        result_dict['VerbsList'] = [w[0] for w in verb_counter.most_common(self.most_common_count)]
+        result_dict['NounsList'] = [w[0] for w in noun_counter.most_common(self.most_common_count)]
+        result_dict['PropsList'] = [w[0] for w in prop_counter.most_common(self.most_common_count)]
 
         return result_dict
 

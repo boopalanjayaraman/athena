@@ -6,8 +6,12 @@ from transformers import pipeline
 import logging
 
 class EntityExtractor : 
-
+    """This class is to extract Entities from a textual content using BERT."""
+    
     def __init__(self, config, logger) -> None:
+        """
+        constructor method. Config and Logger instances have to be passed on from the caller.
+        """
         self.config = config
         self.logger = logger
 
@@ -19,8 +23,12 @@ class EntityExtractor :
 
         self.logger.info("EntityExtractor initialized.")
 
-    def get_entities_bert(self, input_content, should_log=False):
 
+    def get_entities_bert(self, input_content, should_log=False):
+        """
+        uses BERT to extract the entities from the given input_content.
+        input_content : a line of string. 
+        """
         ner_results = self.nlp_pipeline(input_content)
 
         if(should_log):

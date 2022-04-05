@@ -1,0 +1,72 @@
+import numpy as np
+import pandas as pd
+import transformers
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+from transformers import pipeline
+import logging
+
+class EntityExtractor : 
+
+    def __init__(self, config, logger) -> None:
+        self.config = config
+        self.logger = logger
+
+        self.tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
+        self.model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
+        self.nlp_pipeline = pipeline("ner", model=self.model, tokenizer=self.tokenizer)
+
+        self.confidence_score = float(config['InputDataSettings']['ERConfidenceScore']) # 0.7
+
+        self.logger.info("EntityExtractor initialized.")
+
+    def get_entities_bert(self, input_content, should_log=False):
+
+        ner_results = self.nlp_pipeline(input_content)
+
+        if(should_log):
+            self.logger.info("entities extracted ner_results: %s", ner_results)
+
+        entityList = []
+        current_token = ''
+        last_index = 0
+        last_token_apostrophe = False
+
+        #filter entites with less confidence
+        confidence_score =  0.7 if self.confidence_score == None else self.confidence_score
+        filtered_results = list(filter(lambda x: x['score'] > confidence_score, ner_results))
+
+        for entity in filtered_results: 
+
+            if entity['word'].startswith('##'): #bert specific prefix
+                current_token += entity['word'][2:]
+                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']}
+
+            elif entity['word'] == "'": #apostrophe
+                last_token_apostrophe = True
+                current_token += entity['word'] 
+                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity']} #appending to last token
+
+            elif last_token_apostrophe == True:
+                current_token += entity['word'] 
+                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity']} #appending to last token
+                last_token_apostrophe = False
+
+            elif ((entity['index'] - last_index) <= 1 and (last_index != 0)):
+                current_token += ' '+ entity['word']  
+                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity']} #appending to last token
+
+            else:
+                current_token = entity['word']
+                entityList.append({ 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']})
+
+            last_index = entity['index']  
+            
+        filter_one_letter_tokens = filter(lambda x: len(x['token']) > 1, entityList)
+
+        if(should_log):
+            self.logger.info("entities extracted final: %s", filter_one_letter_tokens)
+
+        return list(filter_one_letter_tokens)
+
+
+

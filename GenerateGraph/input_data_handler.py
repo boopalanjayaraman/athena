@@ -2,6 +2,11 @@ import numpy as np
 import pandas as pd
 import logging
 
+from GenerateGraph.domain_words_extractor import DomainWordsExtractor
+from GenerateGraph.entity_extractor import EntityExtractor
+from GenerateGraph.pattern_finder import PatternFinder
+from GenerateGraph.pos_extractor import PosExtractor
+
 class InputDataHandler : 
     """
     This class is to handle the input data file and call the necessary downstream actions on it.
@@ -9,7 +14,7 @@ class InputDataHandler :
     Then compares them and forms the necessary relationships before calling the graph generation.
     """
 
-    def __init__(self, config, logger, entity_extractor, pos_extractor, domain_words_extractor) -> None:
+    def __init__(self, config, logger, entity_extractor : EntityExtractor, pos_extractor : PosExtractor, domain_words_extractor: DomainWordsExtractor, pattern_finder: PatternFinder) -> None:
         """
         constructor method. Config, Logger, Entity Extracor, Pos Extractor, and Domain Words Extractor instances have to be passed on from the caller.
         """
@@ -20,6 +25,7 @@ class InputDataHandler :
         self.pos_extractor = pos_extractor
         self.domain_words_extractor = domain_words_extractor
         self.generate_domain_words = (self.config['InputDataSettings']['GenerateDomainWords'] == 'True')
+        self.pattern_finder = pattern_finder
 
         self.logger.info("InputDataHandler initialized.")
 
@@ -46,14 +52,29 @@ class InputDataHandler :
             masterdata_metadata_file_path = master_data_file_path.replace(master_data_file_path, '.csv', '_metadata.csv')
 
         #automatically extract the domain words and actions
+        domain_words_dict = self.domain_words_extractor.extract_domain_words(input_data_file_path, False, True)
+        self.logger.info("finished extracting domain words.")
+
         #read the file with pandas and loop through
+        df = pd.read_csv(input_data_file_path)
+        for index, row in df.iterrows():
+            content = row[self.content_title]
+
             #extract the entities
+            entities = self.entity_extractor.get_entities_bert(content)
+
             #extract the pos
+            pos_tags = self.pos_extractor.get_pos_sentence(content)
+
             #order them by indexes and see if they match the pattern
+            (is_valid, ordered_word_list) = self.pattern_finder.is_acceptable_pattern(entities, pos_tags)
+
             #match the nouns & verbs with the synonyms dictionary for relationships
+
             #if pattern is good, then create the graph - node, relationship (ignore if already exists)
             #create graph nodes for the master data
         
+
 
         
 

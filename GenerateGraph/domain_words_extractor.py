@@ -13,7 +13,7 @@ nltk.download('punkt')
 class DomainWordsExtractor : 
     """This class is to go through a given full-dataset and understand the most used common words in order to create a list of domain relationships and nouns for the graph."""
 
-    symbolList = ['`','~', '!','@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '[', '}', ']', '|', '\\', ':', ';', '"', '\'',',', '<', '.', '>', '?', '/' ]
+    symbolList = ['`','~', '!','@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '[', '}', ']', '|', '\\', ':', ';', '"', '\'',',', '<', '.', '>', '?', '/' ] #list of symbols to omit during tokenization
 
     def __init__(self, config, logger) -> None:
         """
@@ -33,6 +33,7 @@ class DomainWordsExtractor :
     def extract_domain_words(self, input_file_path, should_log=False, do_full_set=False):
         """
         Extracts the domain words on a given file.
+        do_full_set is by default False. Need to set it to True to run it for the whole file.
         """
         if input_file_path == None or input_file_path == '':
             input_file_path = self.config['InputDataSettings']['InputDataSetFile']
@@ -45,16 +46,16 @@ class DomainWordsExtractor :
 
         #loop for every row
         for index, row in df.iterrows():
-            content = str.lower(row['headline'])
+            content = str.lower(row[self.content_title])
             tokenized = [w for w in word_tokenize(content) if not w in self.stop_words and not w in DomainWordsExtractor.symbolList]
 
             pos_content = self.nlp_pipeline(" ".join(tokenized))
 
             for token in pos_content: 
                 if(token.pos_ == "VERB"):
-                    verblist.extend([token.text])
+                    verblist.extend([token.lemma_]) #lemmatized (for relationship)
                 elif(token.pos_ == "PROPN"):
-                    proplist.extend([token.text])
+                    proplist.extend([token.text]) 
                 elif(token.pos_ == "NOUN"):
                     nounlist.extend([token.text])
             

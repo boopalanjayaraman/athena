@@ -1,5 +1,5 @@
 import logging
-from xmlrpc.client import Boolean
+import re #regex
 
 class PatternFinder :
     """
@@ -18,7 +18,7 @@ class PatternFinder :
         """
         self.config = config
         self.logger = logger
-        self.accepted_pattern = self.config['GraphSettings']['SentencePatternRegex']
+        self.accepted_pattern = self.config['GraphSettings']['SentencePatternRegex'] #this is the acceptable pattern of sentences.
 
         self.logger.info("PatternFinder initialized.")
 
@@ -27,6 +27,37 @@ class PatternFinder :
         orders the entities and pos_tags based on index and verifies them if they are in the acceptable patterns.
         Also returns the ordered list
         """
-        return (True, [])
+        all_applicable_tokens = []
+
+        for item in entities:
+            item['type'] = 'E'
+            all_applicable_tokens.append(item)
+
+        for item in pos_tags:
+            if item['pos'] == 'VERB':
+                item['type'] = 'V'
+                all_applicable_tokens.append(item)
+            elif item['pos'] == 'PROPN':
+                item['type'] = 'P'
+                #we need to ignore PROPN because it denotes "the who" part which we already get using BERT.
+            elif item['pos'] == 'NOUN':
+                item['type'] = 'N'
+                all_applicable_tokens.append(item)
+            else:
+                item['type'] = 'na'
+       
+        #sort the tokens
+        all_applicable_tokens.sort(key=lambda x: x['index'])
+        current_pattern = "".join(list(map(lambda x: x['type'], all_applicable_tokens)))
+
+        #regex on the current pattern with the acceptable pattern
+        pattern_match = re.search(self.accepted_pattern, current_pattern)
+
+        if pattern_match:
+            return (True, all_applicable_tokens)
+        else:
+            return (False, all_applicable_tokens)
+
+        
 
 

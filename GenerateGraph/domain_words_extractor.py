@@ -63,7 +63,7 @@ class DomainWordsExtractor :
                 break
 
         verb_counter = Counter(verblist)
-        noun_counter = Counter(nounlist)
+        noun_counter = Counter(nounlist)    
         prop_counter = Counter(proplist)
 
         #fetch only the most common used words

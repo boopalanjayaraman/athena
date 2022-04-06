@@ -25,6 +25,8 @@ class PosExtractor :
         """
         posList = []
 
+        input_content = str.lower(input_content)
+
         nlp_doc = self.nlp_pipeline(input_content)
         for token in nlp_doc: 
             posList.append({ 'token' : token.text, 'pos' : token.pos_, 'lemma': token.lemma_, 'index': token.idx })

@@ -70,6 +70,10 @@ class InputDataHandler :
         domain_words_dict = self.domain_words_extractor.extract_domain_words(input_data_file_path, False, True)
         self.logger.info("finished extracting domain words.")
 
+        #set up schema for graph here
+        self.setup_schema(domain_words_dict)
+
+
         #read the file with pandas and loop through
         df = pd.read_csv(input_data_file_path)
         for index, row in df.iterrows():
@@ -91,6 +95,20 @@ class InputDataHandler :
             ##### NOT DONE FOR NOW ####
             
             #if pattern is good, then create the graph - node, relationship (ignore if already exists)
+            #create the entity, verb, noun connections in files
+            # NEED TO GENERATE THE FILES ACCORDING TO THE FORMAT AND LOAD THE FILES
+            # CREATE A LOAD JOB FOR THEM AND RUN THEM.
+
+
+    def setup_schema(self, domain_words_dict):
+        nodes_list = ['Organization','Person','Object','Location']
+        node_infos = [ {'name': w} for w in nodes_list ]
+        verbs_list = domain_words_dict['VerbsList']
+        relationship_infos = [ {'name': w} for w in verbs_list ]
+        self.graph_generator.setup_schema(node_infos, relationship_infos)
+        self.logger.info("finished setting up schema from domain.")
+
+            
 
 
 

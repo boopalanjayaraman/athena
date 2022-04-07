@@ -27,6 +27,7 @@ class DomainWordsExtractor :
         self.stop_words = set(stopwords.words('english'))
         self.content_title = config['InputDataSettings']['ContentTitle']
         self.most_common_count = int(config['InputDataSettings']['MostCommon'])
+        self.use_optimal_most_common_count = (config['InputDataSettings']['UseOptimalMostCommonCount'] == 'True')
 
         self.logger.info("DomainWordsExtractor initialized.")
 
@@ -35,6 +36,8 @@ class DomainWordsExtractor :
         Extracts the domain words on a given file.
         do_full_set is by default False. Need to set it to True to run it for the whole file.
         """
+        self.logger.info("extract_domain_words called.")
+
         if input_file_path == None or input_file_path == '':
             input_file_path = self.config['InputDataSettings']['InputDataSetFile']
         
@@ -66,15 +69,40 @@ class DomainWordsExtractor :
         noun_counter = Counter(nounlist)    
         prop_counter = Counter(proplist)
 
+        optimal_most_common_verb_count = get_optimal_most_common_count(verb_counter) if self.use_optimal_most_common_count else self.most_common_count
+        optimal_most_common_noun_count = get_optimal_most_common_count(noun_counter) if self.use_optimal_most_common_count else self.most_common_count
+        optimal_most_common_prop_count = get_optimal_most_common_count(prop_counter) if self.use_optimal_most_common_count else self.most_common_count
+
         #fetch only the most common used words
         result_dict = {}
-        result_dict['VerbsList'] = [w[0] for w in verb_counter.most_common(self.most_common_count)]
-        result_dict['NounsList'] = [w[0] for w in noun_counter.most_common(self.most_common_count)]
-        result_dict['PropsList'] = [w[0] for w in prop_counter.most_common(self.most_common_count)]
+        result_dict['VerbsList'] = [w[0] for w in verb_counter.most_common(optimal_most_common_verb_count)]
+        result_dict['NounsList'] = [w[0] for w in noun_counter.most_common(optimal_most_common_noun_count)]
+        result_dict['PropsList'] = [w[0] for w in prop_counter.most_common(optimal_most_common_prop_count)]
+
+        self.logger.info("extract_domain_words finished.")
 
         return result_dict
 
         
+    def get_optimal_most_common_count(self, word_counter : Counter):
+        """
+        Decides the optimal most common count for the word counter
+        To cover 70% of the word set
+        """
+        self.logger.info("get_optimal_most_common_count finished.")
+
+        total_occurrences = sum([w[1] for w in word_counter.most_common()])
+        current_occurrences = 0
+        current_count = 0
+        for w in word_counter.most_common():
+            current_occurrences += w[1]
+            current_count += 1
+            if(float(current_occurrences / total_occurrences) > 0.70):
+                break
+
+        return current_count
+
+
 
 
     

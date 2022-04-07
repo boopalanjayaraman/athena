@@ -69,9 +69,9 @@ class DomainWordsExtractor :
         noun_counter = Counter(nounlist)    
         prop_counter = Counter(proplist)
 
-        optimal_most_common_verb_count = get_optimal_most_common_count(verb_counter) if self.use_optimal_most_common_count else self.most_common_count
-        optimal_most_common_noun_count = get_optimal_most_common_count(noun_counter) if self.use_optimal_most_common_count else self.most_common_count
-        optimal_most_common_prop_count = get_optimal_most_common_count(prop_counter) if self.use_optimal_most_common_count else self.most_common_count
+        optimal_most_common_verb_count = self.get_optimal_most_common_count(verb_counter) if self.use_optimal_most_common_count else self.most_common_count
+        optimal_most_common_noun_count = self.get_optimal_most_common_count(noun_counter) if self.use_optimal_most_common_count else self.most_common_count
+        optimal_most_common_prop_count = self.get_optimal_most_common_count(prop_counter) if self.use_optimal_most_common_count else self.most_common_count
 
         #fetch only the most common used words
         result_dict = {}

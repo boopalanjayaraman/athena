@@ -34,31 +34,11 @@ class InputDataHandler :
         self.domain_nouns_set = set()
         self.content_title = config['InputDataSettings']['ContentTitle']
         self.date_title = config['InputDataSettings']['DateTitle']
+        self.node_entity_type_mappings = InputDataHandler.get_node_entity_type_mappings()
 
 
         self.logger.info("InputDataHandler initialized.")
-
-    def process_master_data_file(self, master_data_file_path=None):
-        """
-        Starts processing the input file and does the graph generation pipeline (entity extraction, pos extraction, relationship generation, domain words extraction and graph generation)
-        master_data_file_path : is an optional file for graph creation
-        """
-        self.logger.info("process_master_data_file is called.")
-        if master_data_file_path == None:
-            master_data_file_path = self.config['InputDataSettings']['MasterDataFile']
-
-        if str.strip(master_data_file_path) == '':
-            raise Exception("Input Master Data File Path is unavailable. Please pass the value as input or set the value in the configuration.")
-
-        #find the master data's metadata file under a similar name but with a suffix of _metadata.csv
-        masterdata_metadata_file_path = ''
-        if str.strip(master_data_file_path) != '':
-            masterdata_metadata_file_path = master_data_file_path.replace(master_data_file_path, '.csv', '_metadata.csv')
-
-        #create graph nodes for the master data
-
-        return None
-
+        
     
     def process_file(self, input_data_file_path=None):
         """
@@ -183,24 +163,37 @@ class InputDataHandler :
 
     def get_node_type(self, token):
         """
+        this method returns the node type for the token based on the entity type or pos type.
         """
         # Entity --> B-ORG, I-ORG = Organization, B-PER, I-PER = Person, B-MISC, I-MISC = Object, B-LOC, I-LOC = Location
         # POS --> VERB = edge, NOUN = Object
         node_type = ''
 
-        if (token['type'] == 'E') and ((token['entity'] == 'B-ORG') or (token['entity'] == 'I-ORG')):
-            node_type = 'Organization'
-        elif token['type'] == 'E' and ((token['entity'] == 'B-PER') or (token['entity'] == 'I-PER')):
-            node_type = 'Person'
-        elif token['type'] == 'E' and ((token['entity'] == 'B-MISC') or (token['entity'] == 'I-MISC')):
-            node_type = 'Object'
-        elif token['type'] == 'E' and ((token['entity'] == 'B-LOC') or (token['entity'] == 'I-LOC')):
-            node_type = 'Location'
+        if (token['type'] == 'E'):
+            node_type = self.node_entity_type_mappings[token['type']][token['entity']] 
         elif token['type'] == 'N':
             node_type = 'Object'
         
         return node_type
 
+
+    def get_node_entity_type_mappings():
+        """
+        returns the full mapping of node type and entity type
+        """
+        return {
+            "E": {
+                "B-ORG": "Organization",
+                "I-ORG" : "Organization",
+                "B-PER": "Person",
+                "I-PER" : "Person",
+                "B-MISC": "Object",
+                "I-MISC" : "Object",
+                "B-LOC": "Location",
+                "I-LOC" : "Location",
+            },
+            "N" : "Object"
+        }
 
         
 

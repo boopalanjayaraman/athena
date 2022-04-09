@@ -145,11 +145,13 @@ class GraphGenerator:
         """
         self.connection.gsql(add_relationships_query)
 
+
     def get_relationship_name(verb_token):
         """
         returns the relationship name from verb token
         """
         return "r_" + verb_token
+        
 
     def add_node_to_graph(self, node_token, node_type):
         """
@@ -161,8 +163,9 @@ class GraphGenerator:
         if len(existing_nodes) > 0:
             node_id = existing_nodes[0]['id']
         else:
-            node_id = "" #generate it
-            self.connection.upsertVertex(node_type, node_id, { "name": node_token['token']}) #how to generate this id? TODO:
+            node_count = self.connection.getVertexCount("*").values() #cannot rely on this fully. If we do async methods / do inserts from multiple clients, this will run into concurrency issues 
+            node_id = sum(node_count) + 1 #generated with count for now. TODO: How else to reliably generate this id?
+            self.connection.upsertVertex(node_type, node_id, { "name": node_token['token']}) 
 
         return node_id
 

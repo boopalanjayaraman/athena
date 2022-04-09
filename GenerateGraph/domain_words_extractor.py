@@ -53,21 +53,25 @@ class DomainWordsExtractor :
 
         #loop for every row
         for index, row in df.iterrows():
-            content = str.lower(row[self.content_title])
-            tokenized = [w for w in word_tokenize(content) if not w in self.stop_words and not w in DomainWordsExtractor.symbolList]
+            try:
+                content = str.lower(row[self.content_title])
+                tokenized = [w for w in word_tokenize(content) if not w in self.stop_words and not w in DomainWordsExtractor.symbolList]
 
-            pos_content = self.nlp_pipeline(" ".join(tokenized))
+                pos_content = self.nlp_pipeline(" ".join(tokenized))
 
-            for token in pos_content: 
-                if(token.pos_ == "VERB"):
-                    verblist.extend([token.lemma_]) #lemmatized (for relationship)
-                elif(token.pos_ == "PROPN"):
-                    proplist.extend([token.text]) 
-                elif(token.pos_ == "NOUN"):
-                    nounlist.extend([token.text])
-            
-            if do_full_set == False and index > 99:
-                break
+                for token in pos_content: 
+                    if(token.pos_ == "VERB"):
+                        verblist.extend([token.lemma_]) #lemmatized (for relationship)
+                    elif(token.pos_ == "PROPN"):
+                        proplist.extend([token.text]) 
+                    elif(token.pos_ == "NOUN"):
+                        nounlist.extend([token.text])
+                
+                if do_full_set == False and index > 99:
+                    break
+            except:
+                self.logger.debug( str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
+                continue
 
         verb_counter = Counter(verblist)
         noun_counter = Counter(nounlist)    

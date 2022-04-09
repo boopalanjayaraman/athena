@@ -38,7 +38,7 @@ class InputDataHandler :
 
 
         self.logger.info("InputDataHandler initialized.")
-        
+
     
     def process_file(self, input_data_file_path=None):
         """
@@ -67,27 +67,31 @@ class InputDataHandler :
         #read the file with pandas and loop through
         df = pd.read_csv(input_data_file_path)
         for index, row in df.iterrows():
-            content = row[self.content_title]
-            date = row[self.date_title]
-            #extract the entities
-            entities = self.entity_extractor.get_entities_bert(content)
+            try:
+                content = row[self.content_title]
+                date = row[self.date_title]
+                #extract the entities
+                entities = self.entity_extractor.get_entities_bert(content)
 
-            #extract the pos
-            pos_tags = self.pos_extractor.get_pos_sentence(content)
+                #extract the pos
+                pos_tags = self.pos_extractor.get_pos_sentence(content)
 
-            #order them by indexes and see if they match the pattern
-            #also get the relevant words only as part of this
-            is_valid, ordered_word_list = self.pattern_finder.is_acceptable_pattern(entities, pos_tags)
+                #order them by indexes and see if they match the pattern
+                #also get the relevant words only as part of this
+                is_valid, ordered_word_list = self.pattern_finder.is_acceptable_pattern(entities, pos_tags)
 
-            if is_valid == False:
+                if is_valid == False:
+                    continue
+
+                #match the nouns & verbs with the synonyms dictionary for relationships
+                ##### NOT DONE FOR NOW ####
+                
+                #if pattern is good, then create the graph - node, relationship (ignore if already exists)
+                #create the entity, verb, noun connections in files
+                self.process_tokens_with_graph(ordered_word_list, date)
+            except:
+                self.logger.debug( str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
                 continue
-
-            #match the nouns & verbs with the synonyms dictionary for relationships
-            ##### NOT DONE FOR NOW ####
-            
-            #if pattern is good, then create the graph - node, relationship (ignore if already exists)
-            #create the entity, verb, noun connections in files
-            self.process_tokens_with_graph(ordered_word_list, date)
             
     def process_tokens_with_graph(self, ordered_word_list, date):
         """

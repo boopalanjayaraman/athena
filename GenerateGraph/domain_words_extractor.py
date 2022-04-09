@@ -28,6 +28,10 @@ class DomainWordsExtractor :
         self.content_title = config['InputDataSettings']['ContentTitle']
         self.most_common_count = int(config['InputDataSettings']['MostCommon'])
         self.use_optimal_most_common_count = (config['InputDataSettings']['UseOptimalMostCommonCount'] == 'True')
+        self.common_word_coverage_percent = float(config['InputDataSettings']['CommonWordCoveragePercent'])
+
+        if self.use_optimal_most_common_count and self.common_word_coverage_percent == 0.0:
+           self.common_word_coverage_percent = 0.7 
 
         self.logger.info("DomainWordsExtractor initialized.")
 
@@ -97,7 +101,7 @@ class DomainWordsExtractor :
         for w in word_counter.most_common():
             current_occurrences += w[1]
             current_count += 1
-            if(float(current_occurrences / total_occurrences) > 0.70):
+            if(float(current_occurrences / total_occurrences) > self.common_word_coverage_percent):
                 break
 
         return current_count

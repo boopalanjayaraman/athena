@@ -22,58 +22,175 @@ class GraphGenerator:
 
         self.connection = tg.TigerGraphConnection(self.host_name, self.graph_name, self.user_name, self.password)
 
+        # create the secret
+        secret = self.connection.createSecret()
+        token =  self.connection.getToken(secret, setToken=True)
+
         self.logger.info("GraphGenerator initialized.")
 
+    def use_graph(self):
+        """
+        This method executes use graph statement. Default graph name is fetched from the config
+        """
+        self.logger.info("use graph is called.")
+        full_query = str.format("USE GRAPH {}", self.graph_name)
+        result = self.connection.gsql(full_query)
+
+        if result.startswith('Using graph') == False:
+            raise Exception("ERR: Use graph query execution failed.")
+
     
-    def create_nodes(self, node_infos):
+    def create_nodes_schema(self, node_infos):
         """
         This method creates the initial nodes (vertices) with the given list of node_infos
         """
         self.logger.info("create_initial_nodes is called.")
 
+        existing_node_types = self.connection.getVertexTypes(force=True)
+
         query_list = []
+        new_node_available = False
+
         for node_info in node_infos:
+            #skip this if it already exists.
+            if node_info in existing_node_types:
+                continue
             query_list.append(str.format('CREATE VERTEX {}(PRIMARY_ID id STRING, name STRING) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true"', node_info['name']))
+            new_node_available = True
 
         full_query = "\n".join(query_list)
+        full_query = "USE GLOBAL" + "\n" + full_query
         self.connection.gsql(full_query)
 
+        if new_node_available:
+            #adding the created nodes into the graph
+            self.add_nodes_to_graph_schema(node_infos)
 
-    def create_relationships(self, relationship_infos):
+
+    def create_relationships_schema(self, relationship_infos):
         """
         This method creates the initial relationships (edges) with the given list of relationship_infos.
         NOTE that all nodes are created using wildcard option. 
         """
         self.logger.info("create_relationships is called.")
-        query_list = []
-        for relationship_info in relationship_infos:
-            query_list.append(str.format('CREATE DIRECTED EDGE r_{} (FROM *, TO *, label STRING, happened DATETIME, month UINT, year UINT) WITH REVERSE_EDGE="reverse_r_{}"', relationship_info['name'], relationship_info['name']))
-            ## CAUTION: wildcard edges creation. Will only consider the vertex types at the time of execution. Future vertices are not considered. Create the master data vertices before this action, if any.
 
+        existing_relationship_types = self.connection.getEdgeTypes(force=True)
+
+        query_list = []
+        new_relationship_available = False
+
+        for relationship_info in relationship_infos:
+            #skip this if it already exists.
+            if relationship_info in existing_relationship_types:
+                continue
+            relationship_name = GraphGenerator.get_relationship_name(relationship_info['name'])
+            query_list.append(str.format('CREATE DIRECTED EDGE {} (FROM *, TO *, label STRING, happened DATETIME, month UINT, year UINT) WITH REVERSE_EDGE="reverse_{}"', relationship_name, relationship_name))
+            ## CAUTION: wildcard edges creation. Will only consider the vertex types at the time of execution. Future vertices are not considered. Create the master data vertices before this action, if any.
             ## CAUTION: 'r_' is prefixed with the edge name as in 'r_NAME' to avoid the names clashing with reserved keywords.
+            new_relationship_available = True
 
         full_query = "\n".join(query_list)
+        full_query = "USE GLOBAL" + "\n" + full_query
         self.connection.gsql(full_query)
-        return None
 
-    def add_to_graph(self, file_name):
-        #handle all cases here
-        # Entity --> B-ORG, I-ORG = Organization, B-PER, I-PER = Person, B-MISC, I-MISC = Object, B-LOC, I-LOC = Location
-        # POS --> VERB = edge, NOUN = Object
-        return None
+        if new_relationship_available:
+            #adding the created relationships into the graph
+            self.add_relationships_to_graph_schema(relationship_infos)
 
-    def setup_schema(self, node_infos, relationship_infos):
+
+    def add_nodes_to_graph_schema(self, node_infos):
         """
-        Sets up schema with Graph for given node_infos and relationship_infos
+        This method ports all the nodes (vertexes) created using create_nodes method to a particular graph
         """
-        self.logger.info("setup_schema is called.")
+        self.logger.info("add_nodes_to_graph is called.")
+
+        existing_node_types = self.connection.getVertexTypes(force=True)
+        
+        query_list = []
+        for node_info in node_infos:
+            #skip this if it already exists.
+            if node_info in existing_node_types:
+                continue
+            query_list.append(str.format('ADD VERTEX {} TO GRAPH {};', node_info['name'], self.graph_name))
+
+        add_nodes_query = "\n".join(query_list)
+        add_nodes_query = """
+        USE GLOBAL
+        CREATE GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name +""" {
+        """ + add_nodes_query + """
+        }
+        RUN GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name +"""
+        """
+        self.connection.gsql(add_nodes_query)
+
+
+    def add_relationships_to_graph_schema(self, relationship_infos):
+        """
+        This method ports all the relationships (edges) created using create_relationships method to a particular graph
+        """
+        self.logger.info("add_relationships_to_graph is called.")
+
+        query_list = []
+        for relationship_info in relationship_infos:
+            relationship_name = GraphGenerator.get_relationship_name(relationship_info['name'])
+            query_list.append(str.format('ADD EDGE {} TO GRAPH {}; ADD EDGE reverse_{} TO GRAPH {};', relationship_name, self.graph_name, relationship_name, self.graph_name))
+
+        add_relationships_query = "\n".join(query_list)
+        add_relationships_query = """
+        USE GLOBAL
+        CREATE GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name +""" {
+        """ + add_relationships_query + """
+        }
+        RUN GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name +"""
+        """
+        self.connection.gsql(add_relationships_query)
+
+    def get_relationship_name(verb_token):
+        """
+        returns the relationship name from verb token
+        """
+        return "r_" + verb_token
+
+    def add_node_to_graph(self, node_token, node_type):
+        """
+        This method will add new nodes to the graph
+        if exists already, it will just return the id
+        """
+        existing_nodes = self.connection.getVertices(node_type, "", "name=" + node_token['token'])
+        node_id = ""
+        if len(existing_nodes) > 0:
+            node_id = existing_nodes[0]['id']
+        else:
+            node_id = "" #generate it
+            self.connection.upsertVertex(node_type, node_id, { "name": node_token['token']}) #how to generate this id? TODO:
+
+        return node_id
+
+    def add_relationship_to_graph(self, from_node_type, from_node, relationship, to_node_type, to_node, attributes=None):
+        """
+        This method will add new relationships between from_node and to_node to the graph 
+        """
+        self.connection.upsertEdge(from_node_type, from_node, relationship, to_node_type, to_node, attributes)
+
+
+    def drop_all(self):
+        """
+        WARNING: destroyer method. Should not be used unless you want to start again.
+        clears all the schema.
+        """
         self.logger.info("clearing off the schema (drop all).")
         self.connection.gsql('''
         USE GLOBAL
         DROP ALL
         ''')
 
-        self.create_nodes(node_infos)
-        self.create_relationships(relationship_infos)
+    def setup_schema(self, node_infos, relationship_infos):
+        """
+        Sets up schema with Graph for given node_infos and relationship_infos
+        """
+        self.logger.info("setup_schema is called.")
+
+        self.create_nodes_schema(node_infos)
+        self.create_relationships_schema(relationship_infos)
 
 

@@ -3,11 +3,11 @@ import numpy as np
 import pandas as pd
 import logging
 
-from GenerateGraph.domain_words_extractor import DomainWordsExtractor
-from GenerateGraph.entity_extractor import EntityExtractor
-from GenerateGraph.graph_generator import GraphGenerator
-from GenerateGraph.pattern_finder import PatternFinder
-from GenerateGraph.pos_extractor import PosExtractor
+from domain_words_extractor import DomainWordsExtractor
+from entity_extractor import EntityExtractor
+from graph_generator import GraphGenerator
+from pattern_finder import PatternFinder
+from pos_extractor import PosExtractor
 
 class InputDataHandler : 
     """
@@ -93,6 +93,7 @@ class InputDataHandler :
                 self.logger.debug( str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
                 continue
             
+
     def process_tokens_with_graph(self, ordered_word_list, date):
         """
         Splits the ordered word list along with their types (E,V,N), checks them and creates them in the graph

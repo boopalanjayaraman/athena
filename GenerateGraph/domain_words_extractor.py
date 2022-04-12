@@ -22,6 +22,7 @@ class DomainWordsExtractor :
         self.config = config
         self.logger = logger
 
+        #installed with tar
         self.nlp_pipeline = spacy.load("en_core_web_sm")
 
         self.stop_words = set(stopwords.words('english'))

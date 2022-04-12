@@ -15,8 +15,17 @@ class EntityExtractor :
         self.config = config
         self.logger = logger
 
-        self.tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
-        self.model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
+        self.load_bert_from_local = (config['GeneralSettings']['LoadBERTFromLocal'] == 'True')
+        self.local_bert_path = config['GeneralSettings']['LocalBERTPath']
+        self.remote_bert_path = config['GeneralSettings']['RemoteBERTPath']
+
+        if self.load_bert_from_local:
+            self.tokenizer = AutoTokenizer.from_pretrained(self.local_bert_path, local_files_only=True)
+            self.model = AutoModelForTokenClassification.from_pretrained(self.local_bert_path, local_files_only=True)
+        else:
+            self.tokenizer = AutoTokenizer.from_pretrained(self.remote_bert_path)
+            self.model = AutoModelForTokenClassification.from_pretrained(self.remote_bert_path)
+        
         self.nlp_pipeline = pipeline("ner", model=self.model, tokenizer=self.tokenizer)
 
         self.confidence_score = float(config['InputDataSettings']['ERConfidenceScore']) # 0.7

@@ -9,10 +9,13 @@ from pos_extractor import PosExtractor
 from log_helper import logger
 from config_helper import config
 
+
 def init():
     print('hello world!')
+    logger.info('##App Start: GenerateGraph Module initializing.')
     logger.info('logger is working')
     logger.info('config is working. TestConfig: %s ', config['GeneralSettings']['TestConfig'])
+ 
 
 def read_data():
     logger.info('read_data is being invoked.')
@@ -28,7 +31,7 @@ def read_data():
     logger.info('initialized all necessary instances.')
     
     #process the file
-    logger.info('starting to process the input data file.')
+    logger.info('## starting to process the input data file.')
     input_data_handler.process_file()
     
 

@@ -9,6 +9,8 @@ from graph_generator import GraphGenerator
 from pattern_finder import PatternFinder
 from pos_extractor import PosExtractor
 
+from os import path
+
 class InputDataHandler : 
     """
     This class is to handle the input data file and call the necessary downstream actions on it.
@@ -48,7 +50,7 @@ class InputDataHandler :
         self.logger.info("process_file is called.")
 
         if input_data_file_path == None:
-            input_data_file_path = self.config['InputDataSettings']['InputDataSetFile']
+            input_data_file_path = path.join(path.dirname(path.abspath(__file__)), self.config['InputDataSettings']['InputDataSetFile'])
 
         if str.strip(input_data_file_path) == '':
             raise Exception("Input Data File Path is unavailable. Please pass the value as input or set the value in the configuration.")

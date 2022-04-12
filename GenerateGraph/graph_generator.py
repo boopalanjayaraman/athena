@@ -19,26 +19,53 @@ class GraphGenerator:
         self.user_name = self.config['GraphSettings']['UserName']
         self.password = self.config['GraphSettings']['Password']
         self.graph_name = self.config['GraphSettings']['GraphName']
+        self.should_create_graph = (self.config['GraphSettings']['CreateGraph'] == 'True')
 
-        self.connection = tg.TigerGraphConnection(self.host_name, self.graph_name, self.user_name, self.password)
+        self.connection = tg.TigerGraphConnection(host=self.host_name, username=self.user_name, password=self.password, graphname=self.graph_name, useCert=False)
 
+        self.logger.info("GraphGenerator connection initialized. Creating secret.")
+        # For the below statements to execute the graph should be created and available
         # create the secret
-        secret = self.connection.createSecret()
+        secret = self.config['GraphSettings']['Secret'] #self.connection.createSecret()
+        if str.strip(secret) == '':
+            secret = self.connection.createSecret()
+
         token =  self.connection.getToken(secret, setToken=True)
 
-        self.logger.info("GraphGenerator initialized.")
+        self.logger.info("GraphGenerator initialized. Created secrets and tokens.")
 
     def use_graph(self):
         """
         This method executes use graph statement. Default graph name is fetched from the config
         """
-        self.logger.info("use graph is called.")
+        self.logger.info("use graph is being called.")
         full_query = str.format("USE GRAPH {}", self.graph_name)
         result = self.connection.gsql(full_query)
 
-        if result.startswith('Using graph') == False:
+        if ('does not exist.' in result) == True:
+            # relying on string result is not a standard way of doing. Need to figure out another way from API if one exists.
+            self.logger.info("Graph does not exist. Calling create graph.")
+            self.create_graph()
+        elif ('Using graph' in result) == False:
+            # relying on string result is not a standard way of doing. Need to figure out another way from API if one exists.
             raise Exception("ERR: Use graph query execution failed.")
+        else:
+            self.logger.info("Graph exists.")
 
+    def create_graph(self):
+        """
+        This method executes create graph statement, if the configuration is true. Default graph name is fetched from the config.
+        """
+        self.logger.info("create graph is being called.")
+        full_query = str.format("CREATE GRAPH {}", self.graph_name)
+        if self.should_create_graph:
+            result = self.connection.gsql(full_query)
+            success_message = str.format('The graph {} is created', self.graph_name)
+            if (success_message in result) == False:
+                raise Exception("ERR: Create graph query execution failed.")
+            self.logger.info("create graph is completed.")
+        else:
+            self.logger.info("create graph is not executed because it is configured not to create.")
     
     def create_nodes_schema(self, node_infos):
         """

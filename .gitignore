@@ -3,3 +3,4 @@
 __pycache__
 /GenerateGraph/configuration_dev.ini
 dslim
+/GenerateGraph/sample_pytigergraph.ipynb

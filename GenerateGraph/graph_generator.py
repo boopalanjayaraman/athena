@@ -2,6 +2,7 @@ import numpy as np
 import logging
 import pyTigerGraph as tg
 import json
+import re #regex
 
 class GraphGenerator:
     """
@@ -20,19 +21,26 @@ class GraphGenerator:
         self.password = self.config['GraphSettings']['Password']
         self.graph_name = self.config['GraphSettings']['GraphName']
         self.should_create_graph = (self.config['GraphSettings']['CreateGraph'] == 'True')
+        self.secret = ''
+        self.api_token = ''
 
-        self.connection = tg.TigerGraphConnection(host=self.host_name, username=self.user_name, password=self.password, graphname=self.graph_name, useCert=False)
+        self.connection = tg.TigerGraphConnection(host=self.host_name, username=self.user_name, password=self.password, graphname=self.graph_name, gsqlVersion="3.5.0", useCert=True)
 
+        self.logger.info("GraphGenerator initialized.")
+
+
+    def initialize_token(self):
         self.logger.info("GraphGenerator connection initialized. Creating secret.")
         # For the below statements to execute the graph should be created and available
         # create the secret
-        secret = self.config['GraphSettings']['Secret'] #self.connection.createSecret()
-        if str.strip(secret) == '':
-            secret = self.connection.createSecret()
+        self.secret = self.config['GraphSettings']['Secret'] 
+        if str.strip(self.secret) == '':
+            self.secret = self.connection.createSecret()
 
-        token =  self.connection.getToken(secret, setToken=True)
+        self.api_token = self.config['GraphSettings']['ApiToken'] 
+        if str.strip(self.api_token) == '':
+            self.api_token =  self.connection.getToken(self.secret, setToken=True)
 
-        self.logger.info("GraphGenerator initialized. Created secrets and tokens.")
 
     def use_graph(self):
         """
@@ -52,6 +60,7 @@ class GraphGenerator:
         else:
             self.logger.info("Graph exists.")
 
+
     def create_graph(self):
         """
         This method executes create graph statement, if the configuration is true. Default graph name is fetched from the config.
@@ -67,13 +76,16 @@ class GraphGenerator:
         else:
             self.logger.info("create graph is not executed because it is configured not to create.")
     
+
     def create_nodes_schema(self, node_infos):
         """
         This method creates the initial nodes (vertices) with the given list of node_infos
         """
-        self.logger.info("create_initial_nodes is called.")
+        self.logger.info("create_nodes_schema is called.")
+        self.logger.info("getting existing vertex types.")
 
-        existing_node_types = self.connection.getVertexTypes(force=True)
+        #existing_node_types = self.connection.getVertexTypes(force=True)
+        existing_node_types = self.get_existing_vertex_types_gsql()
 
         query_list = []
         new_node_available = False
@@ -87,10 +99,12 @@ class GraphGenerator:
 
         full_query = "\n".join(query_list)
         full_query = "USE GLOBAL" + "\n" + full_query
+        self.logger.info("creating vertex types globally.")
         self.connection.gsql(full_query)
 
         if new_node_available:
             #adding the created nodes into the graph
+            self.logger.info("adding new nodes to graph's schema.")
             self.add_nodes_to_graph_schema(node_infos)
 
 
@@ -99,9 +113,11 @@ class GraphGenerator:
         This method creates the initial relationships (edges) with the given list of relationship_infos.
         NOTE that all nodes are created using wildcard option. 
         """
-        self.logger.info("create_relationships is called.")
+        self.logger.info("create_relationships_schema is called.")
+        self.logger.info("getting existing edge types.")
 
-        existing_relationship_types = self.connection.getEdgeTypes(force=True)
+        #existing_relationship_types = self.connection.getEdgeTypes(force=True)
+        existing_relationship_types = self.get_existing_edges_types_gsql()
 
         query_list = []
         new_relationship_available = False
@@ -118,10 +134,12 @@ class GraphGenerator:
 
         full_query = "\n".join(query_list)
         full_query = "USE GLOBAL" + "\n" + full_query
+        self.logger.info("creating relationship types globally.")
         self.connection.gsql(full_query)
 
         if new_relationship_available:
             #adding the created relationships into the graph
+            self.logger.info("adding new relationships to graph's schema.")
             self.add_relationships_to_graph_schema(relationship_infos)
 
 
@@ -129,15 +147,10 @@ class GraphGenerator:
         """
         This method ports all the nodes (vertexes) created using create_nodes method to a particular graph
         """
-        self.logger.info("add_nodes_to_graph is called.")
+        self.logger.info("add_nodes_to_graph_schema is called.")
 
-        existing_node_types = self.connection.getVertexTypes(force=True)
-        
         query_list = []
         for node_info in node_infos:
-            #skip this if it already exists.
-            if node_info in existing_node_types:
-                continue
             query_list.append(str.format('ADD VERTEX {} TO GRAPH {};', node_info['name'], self.graph_name))
 
         add_nodes_query = "\n".join(query_list)
@@ -151,11 +164,39 @@ class GraphGenerator:
         self.connection.gsql(add_nodes_query)
 
 
+    def get_existing_vertex_types_gsql(self):
+        """
+        This gets the list of existing vertices using GSQL and parses the output using regular expression
+        """
+        self.logger.info("get_existing_vertices_gsql is called.")
+
+        query = "SHOW VERTEX **"
+        query = str.format("USE GRAPH {};", self.graph_name) + query
+
+        existing_vertices_result = self.connection.gsql(query, self.graph_name)
+        existing_vertices = re.findall("VERTEX (.+)\(.+\)", existing_vertices_result)
+        return existing_vertices
+
+
+    def get_existing_edges_types_gsql(self):
+        """
+        This gets the list of existing edges using GSQL and parses the output using regular expression
+        """
+        self.logger.info("get_existing_edges_gsql is called.")
+
+        query = "SHOW EDGE **"
+        query = str.format("USE GRAPH {};", self.graph_name) + query
+
+        existing_edges_result = self.connection.gsql(query, self.graph_name)
+        existing_edges = re.findall("DIRECTED EDGE (r_.+)\(.+\)", existing_edges_result)
+        return existing_edges
+
+
     def add_relationships_to_graph_schema(self, relationship_infos):
         """
         This method ports all the relationships (edges) created using create_relationships method to a particular graph
         """
-        self.logger.info("add_relationships_to_graph is called.")
+        self.logger.info("add_relationships_to_graph_schema is called.")
 
         query_list = []
         for relationship_info in relationship_infos:
@@ -185,6 +226,9 @@ class GraphGenerator:
         This method will add new nodes to the graph
         if exists already, it will just return the id
         """
+        if(self.api_token == ''):
+            self.initialize_token()
+
         existing_nodes = self.connection.getVertices(node_type, "", "name=" + node_token['token'])
         node_id = ""
         if len(existing_nodes) > 0:
@@ -200,6 +244,9 @@ class GraphGenerator:
         """
         This method will add new relationships between from_node and to_node to the graph 
         """
+        if(self.api_token == ''):
+            self.initialize_token()
+
         self.connection.upsertEdge(from_node_type, from_node, relationship, to_node_type, to_node, attributes)
 
 

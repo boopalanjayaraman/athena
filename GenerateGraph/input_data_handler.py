@@ -79,7 +79,7 @@ class InputDataHandler :
                 content = row[self.content_title]
                 date = row[self.date_title]
                 #extract the entities
-                entities = self.entity_extractor.get_entities_bert(content)
+                entities = self.entitny_extractor.get_entities_bert(content)
 
                 #extract the pos
                 pos_tags = self.pos_extractor.get_pos_sentence(content)
@@ -101,9 +101,10 @@ class InputDataHandler :
                 if self.log_processed_records:
                     self.logger.info(str.format('processed: {}', ordered_word_list))
 
-            except:
+            except Exception as ex:
                 self.logger.info(str.format("ERR: Error processing row {}. Content: {}", index, row[self.content_title]))
                 self.logger.debug(str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
+                self.logger.error('Error:', exc_info=ex)
                 continue
             
 
@@ -124,7 +125,7 @@ class InputDataHandler :
             return
         
         first_verb_token = verb_tokens[0]
-        if first_verb_token not in self.domain_verbs_set:
+        if first_verb_token['token'] not in self.domain_verbs_set:
             return
 
         relationship_name = GraphGenerator.get_relationship_name(first_verb_token['lemma']) # THIS 'lemma' IS IMPORTANT.

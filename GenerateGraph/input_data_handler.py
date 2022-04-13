@@ -190,7 +190,7 @@ class InputDataHandler :
         node_type = ''
 
         if (token['type'] == 'E'):
-            node_type = self.node_entity_type_mappings[token['type']][token['entity']] 
+            node_type = self.node_entity_type_mappings[token['type']][token['entity'][0]] #[0] is necessary to read the key
         elif token['type'] == 'N':
             node_type = 'Object'
         

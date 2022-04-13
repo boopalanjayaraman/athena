@@ -79,7 +79,7 @@ class InputDataHandler :
                 content = row[self.content_title]
                 date = row[self.date_title]
                 #extract the entities
-                entities = self.entitny_extractor.get_entities_bert(content)
+                entities = self.entity_extractor.get_entities_bert(content)
 
                 #extract the pos
                 pos_tags = self.pos_extractor.get_pos_sentence(content)

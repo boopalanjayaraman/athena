@@ -56,7 +56,7 @@ class EntityExtractor :
 
             if entity['word'].startswith('##'): #bert specific prefix
                 current_token += entity['word'][2:]
-                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index'], 'startIndex': entity['index'] }
+                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['start'], 'startIndex': entity['start'] }
 
             elif entity['word'] == "'": #apostrophe
                 last_token_apostrophe = True
@@ -66,7 +66,7 @@ class EntityExtractor :
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
                 existing_entity['entity'] = entity['entity'],
-                existing_entity['index'] = entity['index']
+                existing_entity['index'] = entity['start']
 
             elif last_token_apostrophe == True:
                 current_token += entity['word'] 
@@ -75,7 +75,7 @@ class EntityExtractor :
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
                 existing_entity['entity'] = entity['entity'],
-                existing_entity['index'] = entity['index']
+                existing_entity['index'] = entity['start']
                 last_token_apostrophe = False
 
             elif ((entity['index'] - last_index) <= 1 and (last_index != 0)):
@@ -85,11 +85,11 @@ class EntityExtractor :
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
                 existing_entity['entity'] = entity['entity'],
-                existing_entity['index'] = entity['index']
+                existing_entity['index'] = entity['start']
 
             else:
                 current_token = entity['word']
-                entityList.append({ 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index'], 'startIndex': entity['index'] })
+                entityList.append({ 'token' : current_token, 'entity' : entity['entity'], 'index': entity['start'], 'startIndex': entity['start'] })
 
             last_index = entity['index']  
             

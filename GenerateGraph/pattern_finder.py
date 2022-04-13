@@ -29,7 +29,7 @@ class PatternFinder :
         For ex., Agilent technologies ENTITY & technologies NOUN based on their index values
         """
         for index_pair in entity_index_pairs:
-            if noun_index >= entity_index_pairs['startIndex'] or noun_index <= entity_index_pairs['index']:
+            if noun_index >= index_pair['startIndex'] or noun_index <= index_pair['index']:
                 return True
         #noun token not handled by entities already
         return False
@@ -58,7 +58,7 @@ class PatternFinder :
             elif item['pos'] == 'NOUN':
                 item['type'] = 'N'
 
-                if (self.already_handled_by_entities(item['index']) == False) and (item['token'] in domain_nouns_set):
+                if (self.already_handled_by_entities(item['token'], entity_index_pairs) == False) and (item['token'] in domain_nouns_set):
                     all_applicable_tokens.append(item)
             else:
                 item['type'] = 'na'

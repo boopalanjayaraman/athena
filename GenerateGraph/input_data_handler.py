@@ -38,6 +38,8 @@ class InputDataHandler :
         self.date_title = config['InputDataSettings']['DateTitle']
         self.node_entity_type_mappings = InputDataHandler.get_node_entity_type_mappings()
 
+        self.log_processed_records = (config['InputDataSettings']['LogProcessedRecords'] == 'True')
+
 
         self.logger.info("InputDataHandler initialized.")
 
@@ -55,6 +57,8 @@ class InputDataHandler :
         if str.strip(input_data_file_path) == '':
             raise Exception("Input Data File Path is unavailable. Please pass the value as input or set the value in the configuration.")
 
+        self.logger.info(str.format("input_data_file_path: {}", input_data_file_path))
+
         #automatically extract the domain words and actions
         domain_words_dict = self.domain_words_extractor.extract_domain_words(input_data_file_path, False, True)
         self.logger.info("finished extracting domain words.")
@@ -65,9 +69,11 @@ class InputDataHandler :
         #set up schema for graph here
         self.setup_schema(domain_words_dict)
 
-
         #read the file with pandas and loop through
         df = pd.read_csv(input_data_file_path)
+
+        self.logger.info(str.format("read the input file. Row count: {}", len(df)))
+
         for index, row in df.iterrows():
             try:
                 content = row[self.content_title]
@@ -80,7 +86,7 @@ class InputDataHandler :
 
                 #order them by indexes and see if they match the pattern
                 #also get the relevant words only as part of this
-                is_valid, ordered_word_list = self.pattern_finder.is_acceptable_pattern(entities, pos_tags)
+                is_valid, ordered_word_list = self.pattern_finder.is_acceptable_pattern(entities, pos_tags, self.domain_nouns_set)
 
                 if is_valid == False:
                     continue
@@ -91,8 +97,13 @@ class InputDataHandler :
                 #if pattern is good, then create the graph - node, relationship (ignore if already exists)
                 #create the entity, verb, noun connections in files
                 self.process_tokens_with_graph(ordered_word_list, date)
+
+                if self.log_processed_records:
+                    self.logger.info(str.format('processed: {}', ordered_word_list))
+
             except:
-                self.logger.debug( str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
+                self.logger.info(str.format("ERR: Error processing row {}. Content: {}", index, row[self.content_title]))
+                self.logger.debug(str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
                 continue
             
 
@@ -151,7 +162,8 @@ class InputDataHandler :
 
                 #add the relationship between the subject and object nodes
                 self.graph_generator.add_relationship_to_graph(subject_node_type, subject_node, relationship_name, object_node_type, object_node, relationship_attributes)
-
+                if self.log_processed_records:
+                    self.logger.info(str.format('{}({}) --> {} --> {}({})',  subject_node, subject_node_type, relationship_name, object_node,  object_node_type))
 
     def setup_schema(self, domain_words_dict):
         """

@@ -56,25 +56,40 @@ class EntityExtractor :
 
             if entity['word'].startswith('##'): #bert specific prefix
                 current_token += entity['word'][2:]
-                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']}
+                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index'], 'startIndex': entity['index'] }
 
             elif entity['word'] == "'": #apostrophe
                 last_token_apostrophe = True
                 current_token += entity['word'] 
-                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity']} #appending to last token
+                #entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']} 
+                # #appending to last token
+                existing_entity = entityList[-1]
+                existing_entity['token'] = current_token
+                existing_entity['entity'] = entity['entity'],
+                existing_entity['index'] = entity['index']
 
             elif last_token_apostrophe == True:
                 current_token += entity['word'] 
-                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity']} #appending to last token
+                #entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']} 
+                #appending to last token
+                existing_entity = entityList[-1]
+                existing_entity['token'] = current_token
+                existing_entity['entity'] = entity['entity'],
+                existing_entity['index'] = entity['index']
                 last_token_apostrophe = False
 
             elif ((entity['index'] - last_index) <= 1 and (last_index != 0)):
                 current_token += ' '+ entity['word']  
-                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity']} #appending to last token
+                #entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']} 
+                #appending to last token
+                existing_entity = entityList[-1]
+                existing_entity['token'] = current_token
+                existing_entity['entity'] = entity['entity'],
+                existing_entity['index'] = entity['index']
 
             else:
                 current_token = entity['word']
-                entityList.append({ 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']})
+                entityList.append({ 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index'], 'startIndex': entity['index'] })
 
             last_index = entity['index']  
             

@@ -89,6 +89,7 @@ class DomainWordsExtractor :
         result_dict['PropsList'] = [w[0] for w in prop_counter.most_common(optimal_most_common_prop_count)]
 
         self.logger.info("extract_domain_words finished.")
+        self.logger.info(str.format("VerbsList: {}, NounsList:{}, PropsList:{}", len(result_dict['VerbsList']), len(result_dict['NounsList']), len(result_dict['PropsList'])))
 
         return result_dict
 
@@ -98,7 +99,7 @@ class DomainWordsExtractor :
         Decides the optimal most common count for the word counter
         To cover 70% of the word set
         """
-        self.logger.info("get_optimal_most_common_count finished.")
+        self.logger.info("get_optimal_most_common_count is called.")
 
         total_occurrences = sum([w[1] for w in word_counter.most_common()])
         current_occurrences = 0
@@ -108,6 +109,9 @@ class DomainWordsExtractor :
             current_count += 1
             if(float(current_occurrences / total_occurrences) > self.common_word_coverage_percent):
                 break
+
+        self.logger.info("get_optimal_most_common_count is finished.")
+        self.logger.info(str.format("Coverage: total_occurrences:{}, covered_occurrences:{}, total_count of words:{}, considered count: {}", total_occurrences, current_occurrences, len(word_counter), current_count))
 
         return current_count
 

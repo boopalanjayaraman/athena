@@ -22,16 +22,31 @@ class PatternFinder :
 
         self.logger.info("PatternFinder initialized.")
 
-    def is_acceptable_pattern(self, entities, pos_tags):
+    def already_handled_by_entities(self, noun_index, entity_index_pairs):
+        """
+        This method figures out if a noun token is already handled by entities tokens
+        If so, it should be omitted
+        For ex., Agilent technologies ENTITY & technologies NOUN based on their index values
+        """
+        for index_pair in entity_index_pairs:
+            if noun_index >= entity_index_pairs['startIndex'] or noun_index <= entity_index_pairs['index']:
+                return True
+        #noun token not handled by entities already
+        return False
+
+
+    def is_acceptable_pattern(self, entities, pos_tags, domain_nouns_set):
         """
         orders the entities and pos_tags based on index and verifies them if they are in the acceptable patterns.
         Also returns the ordered list
         """
         all_applicable_tokens = []
 
+        entity_index_pairs = []
         for item in entities:
             item['type'] = 'E'
             all_applicable_tokens.append(item)
+            entity_index_pairs.append({'startIndex': item['startIndex'], 'index': item['index']})
 
         for item in pos_tags:
             if item['pos'] == 'VERB':
@@ -42,7 +57,9 @@ class PatternFinder :
                 #we need to ignore PROPN because it denotes "the who" part which we already get using BERT.
             elif item['pos'] == 'NOUN':
                 item['type'] = 'N'
-                all_applicable_tokens.append(item)
+
+                if (self.already_handled_by_entities(item['index']) == False) and (item['token'] in domain_nouns_set):
+                    all_applicable_tokens.append(item)
             else:
                 item['type'] = 'na'
        
@@ -51,9 +68,11 @@ class PatternFinder :
         current_pattern = "".join(list(map(lambda x: x['type'], all_applicable_tokens)))
 
         #regex on the current pattern with the acceptable pattern
-        pattern_match = re.search(self.accepted_pattern, current_pattern)
+        pattern_match = re.match(self.accepted_pattern, current_pattern)
 
-        if pattern_match:
+        self.logger.info(str.format("current pattern: {}.", current_pattern))
+
+        if pattern_match != None:
             return (True, all_applicable_tokens)
         else:
             return (False, all_applicable_tokens)

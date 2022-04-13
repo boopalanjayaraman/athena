@@ -50,15 +50,19 @@ class GraphGenerator:
         full_query = str.format("USE GRAPH {}", self.graph_name)
         result = self.connection.gsql(full_query)
 
-        if ('does not exist.' in result) == True:
+        result = str.lower(result)
+        not_exists_message = str.lower(str.format("Graph '{}' does not exist.", self.graph_name))
+        using_graph_message = str.lower("Using graph")
+
+        if (not_exists_message in result) == True:
             # relying on string result is not a standard way of doing. Need to figure out another way from API if one exists.
             self.logger.info("Graph does not exist. Calling create graph.")
             self.create_graph()
-        elif ('Using graph' in result) == False:
+        elif (using_graph_message in result) == False:
             # relying on string result is not a standard way of doing. Need to figure out another way from API if one exists.
             raise Exception("ERR: Use graph query execution failed.")
         else:
-            self.logger.info("Graph exists.")
+            self.logger.info("Graph exists. Using it.")
 
 
     def create_graph(self):
@@ -66,15 +70,20 @@ class GraphGenerator:
         This method executes create graph statement, if the configuration is true. Default graph name is fetched from the config.
         """
         self.logger.info("create graph is being called.")
-        full_query = str.format("CREATE GRAPH {}", self.graph_name)
+        full_query = str.format("CREATE GRAPH {} ()", self.graph_name)
         if self.should_create_graph:
+            #execute create graph
             result = self.connection.gsql(full_query)
-            success_message = str.format('The graph {} is created', self.graph_name)
+
+            success_message = str.lower(str.format('The graph {} is created', self.graph_name))
+            result = str.lower(result)
+
             if (success_message in result) == False:
                 raise Exception("ERR: Create graph query execution failed.")
             self.logger.info("create graph is completed.")
         else:
             self.logger.info("create graph is not executed because it is configured not to create.")
+            raise Exception("ERR: Create graph is not executed because it is configured not to create.")
     
 
     def create_nodes_schema(self, node_infos):
@@ -86,26 +95,31 @@ class GraphGenerator:
 
         #existing_node_types = self.connection.getVertexTypes(force=True)
         existing_node_types = self.get_existing_vertex_types_gsql()
+        existing_node_types = [str.lower(n) for n in existing_node_types]
 
         query_list = []
         new_node_available = False
+        to_be_added = []
 
         for node_info in node_infos:
             #skip this if it already exists.
-            if node_info in existing_node_types:
+            if str.lower(node_info['name']) in existing_node_types:
                 continue
             query_list.append(str.format('CREATE VERTEX {}(PRIMARY_ID id STRING, name STRING) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true"', node_info['name']))
             new_node_available = True
+            to_be_added.append(node_info)
 
         full_query = "\n".join(query_list)
         full_query = "USE GLOBAL" + "\n" + full_query
         self.logger.info("creating vertex types globally.")
-        self.connection.gsql(full_query)
+        result = self.connection.gsql(full_query)
+
+        self.logger.info(str.format("result: {}", result))
 
         if new_node_available:
             #adding the created nodes into the graph
             self.logger.info("adding new nodes to graph's schema.")
-            self.add_nodes_to_graph_schema(node_infos)
+            self.add_nodes_to_graph_schema(to_be_added)
 
 
     def create_relationships_schema(self, relationship_infos):
@@ -118,29 +132,34 @@ class GraphGenerator:
 
         #existing_relationship_types = self.connection.getEdgeTypes(force=True)
         existing_relationship_types = self.get_existing_edges_types_gsql()
+        existing_relationship_types = [str.lower(r) for r in existing_relationship_types]
 
         query_list = []
         new_relationship_available = False
+        to_be_added = []
 
         for relationship_info in relationship_infos:
             #skip this if it already exists.
-            if relationship_info in existing_relationship_types:
-                continue
             relationship_name = GraphGenerator.get_relationship_name(relationship_info['name'])
+            if str.lower(relationship_name) in existing_relationship_types:
+                continue
             query_list.append(str.format('CREATE DIRECTED EDGE {} (FROM *, TO *, label STRING, happened DATETIME, month UINT, year UINT) WITH REVERSE_EDGE="reverse_{}"', relationship_name, relationship_name))
             ## CAUTION: wildcard edges creation. Will only consider the vertex types at the time of execution. Future vertices are not considered. Create the master data vertices before this action, if any.
             ## CAUTION: 'r_' is prefixed with the edge name as in 'r_NAME' to avoid the names clashing with reserved keywords.
             new_relationship_available = True
+            to_be_added.append(relationship_info)
 
         full_query = "\n".join(query_list)
         full_query = "USE GLOBAL" + "\n" + full_query
         self.logger.info("creating relationship types globally.")
-        self.connection.gsql(full_query)
+        result = self.connection.gsql(full_query)
+
+        self.logger.info(str.format("result: {}", result))
 
         if new_relationship_available:
             #adding the created relationships into the graph
             self.logger.info("adding new relationships to graph's schema.")
-            self.add_relationships_to_graph_schema(relationship_infos)
+            self.add_relationships_to_graph_schema(to_be_added)
 
 
     def add_nodes_to_graph_schema(self, node_infos):
@@ -161,7 +180,10 @@ class GraphGenerator:
         }
         RUN GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name +"""
         """
-        self.connection.gsql(add_nodes_query)
+        result = self.connection.gsql(add_nodes_query)
+
+        self.logger.info(str.format("result: {}", result))
+        
 
 
     def get_existing_vertex_types_gsql(self):
@@ -171,9 +193,11 @@ class GraphGenerator:
         self.logger.info("get_existing_vertices_gsql is called.")
 
         query = "SHOW VERTEX **"
-        query = str.format("USE GRAPH {};", self.graph_name) + query
 
-        existing_vertices_result = self.connection.gsql(query, self.graph_name)
+        existing_vertices_result = self.connection.gsql(query)
+
+        self.logger.info(str.format("result: {}", existing_vertices_result))
+
         existing_vertices = re.findall("VERTEX (.+)\(.+\)", existing_vertices_result)
         return existing_vertices
 
@@ -185,9 +209,8 @@ class GraphGenerator:
         self.logger.info("get_existing_edges_gsql is called.")
 
         query = "SHOW EDGE **"
-        query = str.format("USE GRAPH {};", self.graph_name) + query
 
-        existing_edges_result = self.connection.gsql(query, self.graph_name)
+        existing_edges_result = self.connection.gsql(query)
         existing_edges = re.findall("DIRECTED EDGE (r_.+)\(.+\)", existing_edges_result)
         return existing_edges
 
@@ -211,7 +234,9 @@ class GraphGenerator:
         }
         RUN GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name +"""
         """
-        self.connection.gsql(add_relationships_query)
+        result = self.connection.gsql(add_relationships_query)
+
+        self.logger.info(str.format("result: {}", result))
 
 
     def get_relationship_name(verb_token):
@@ -266,6 +291,9 @@ class GraphGenerator:
         Sets up schema with Graph for given node_infos and relationship_infos
         """
         self.logger.info("setup_schema is called.")
+
+        #check and use / create graph if necessary before creating the schema.
+        self.use_graph()
 
         self.create_nodes_schema(node_infos)
         self.create_relationships_schema(relationship_infos)

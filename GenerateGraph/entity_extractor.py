@@ -65,7 +65,7 @@ class EntityExtractor :
                 # #appending to last token
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
-                existing_entity['entity'] = entity['entity'],
+                existing_entity['entity'] = entity['entity']
                 existing_entity['index'] = entity['start']
 
             elif last_token_apostrophe == True:
@@ -74,7 +74,7 @@ class EntityExtractor :
                 #appending to last token
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
-                existing_entity['entity'] = entity['entity'],
+                existing_entity['entity'] = entity['entity']
                 existing_entity['index'] = entity['start']
                 last_token_apostrophe = False
 
@@ -84,7 +84,7 @@ class EntityExtractor :
                 #appending to last token
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
-                existing_entity['entity'] = entity['entity'],
+                existing_entity['entity'] = entity['entity']
                 existing_entity['index'] = entity['start']
 
             else:

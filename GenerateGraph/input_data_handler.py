@@ -71,8 +71,9 @@ class InputDataHandler :
 
         #read the file with pandas and loop through
 
-        #df = pd.read_csv(input_data_file_path)
-        df = pd.read_csv(path.join(path.dirname(path.abspath(__file__)),'data\\raw_partner_headlines_micro.csv'))
+        df = pd.read_csv(input_data_file_path)
+        #The below line is used for testing and TESTING ONLY.
+        #df = pd.read_csv(path.join(path.dirname(path.abspath(__file__)),'data\\raw_partner_headlines_micro.csv'))
 
         self.logger.info(str.format("read the input file. Row count: {}", len(df)))
 

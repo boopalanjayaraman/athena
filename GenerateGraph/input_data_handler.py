@@ -70,7 +70,9 @@ class InputDataHandler :
         self.setup_schema(domain_words_dict)
 
         #read the file with pandas and loop through
-        df = pd.read_csv(input_data_file_path)
+
+        #df = pd.read_csv(input_data_file_path)
+        df = pd.read_csv(path.join(path.dirname(path.abspath(__file__)),'data\\raw_partner_headlines_micro.csv'))
 
         self.logger.info(str.format("read the input file. Row count: {}", len(df)))
 
@@ -125,7 +127,7 @@ class InputDataHandler :
             return
         
         first_verb_token = verb_tokens[0]
-        if first_verb_token['token'] not in self.domain_verbs_set:
+        if first_verb_token['lemma'] not in self.domain_verbs_set: # important to use LEMMA to check against the domain verbs set.
             return
 
         relationship_name = GraphGenerator.get_relationship_name(first_verb_token['lemma']) # THIS 'lemma' IS IMPORTANT.

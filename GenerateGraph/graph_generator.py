@@ -254,7 +254,7 @@ class GraphGenerator:
         if(self.api_token == ''):
             self.initialize_token()
 
-        existing_nodes = self.connection.getVertices(node_type, "", "name=" + node_token['token'])
+        existing_nodes = self.connection.getVertices(node_type, "", str.format('name="{}"', node_token['token']))
         node_id = ""
         if len(existing_nodes) > 0:
             node_id = existing_nodes[0]['id']

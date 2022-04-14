@@ -57,9 +57,9 @@ class PatternFinder :
                 #we need to ignore PROPN because it denotes "the who" part which we already get using BERT.
             elif item['pos'] == 'NOUN':
                 item['type'] = 'N'
-
-                if (self.already_handled_by_entities(item['index'], entity_index_pairs) == False) and (item['token'] in domain_nouns_set):
-                    all_applicable_tokens.append(item)
+                
+                #if (self.already_handled_by_entities(item['index'], entity_index_pairs) == False) and (item['token'] in domain_nouns_set):
+                   #all_applicable_tokens.append(item)
             else:
                 item['type'] = 'na'
        

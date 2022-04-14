@@ -55,13 +55,17 @@ class EntityExtractor :
         for entity in filtered_results: 
 
             if entity['word'].startswith('##'): #bert specific prefix
+                #appending to the last one
                 current_token += entity['word'][2:]
-                entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['start'], 'startIndex': entity['start'] }
+                
+                existing_entity = entityList[-1]
+                existing_entity['token'] = current_token
+                existing_entity['entity'] = entity['entity']
+                existing_entity['index'] = entity['start']
 
             elif entity['word'] == "'": #apostrophe
                 last_token_apostrophe = True
                 current_token += entity['word'] 
-                #entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']} 
                 # #appending to last token
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
@@ -70,7 +74,6 @@ class EntityExtractor :
 
             elif last_token_apostrophe == True:
                 current_token += entity['word'] 
-                #entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']} 
                 #appending to last token
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token
@@ -80,7 +83,6 @@ class EntityExtractor :
 
             elif ((entity['index'] - last_index) <= 1 and (last_index != 0)):
                 current_token += ' '+ entity['word']  
-                #entityList[-1] = { 'token' : current_token, 'entity' : entity['entity'], 'index': entity['index']} 
                 #appending to last token
                 existing_entity = entityList[-1]
                 existing_entity['token'] = current_token

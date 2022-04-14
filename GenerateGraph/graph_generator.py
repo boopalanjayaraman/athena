@@ -23,6 +23,7 @@ class GraphGenerator:
         self.should_create_graph = (self.config['GraphSettings']['CreateGraph'] == 'True')
         self.secret = ''
         self.api_token = ''
+        self.graph_auto_created = False
 
         self.connection = tg.TigerGraphConnection(host=self.host_name, username=self.user_name, password=self.password, graphname=self.graph_name, gsqlVersion="3.5.0", useCert=True)
 
@@ -34,11 +35,11 @@ class GraphGenerator:
         # For the below statements to execute the graph should be created and available
         # create the secret
         self.secret = self.config['GraphSettings']['Secret'] 
-        if str.strip(self.secret) == '':
+        if str.strip(self.secret) == '' or self.graph_auto_created == True:
             self.secret = self.connection.createSecret()
 
         self.api_token = self.config['GraphSettings']['ApiToken'] 
-        if str.strip(self.api_token) == '':
+        if str.strip(self.api_token) == '' or self.graph_auto_created == True:
             self.api_token =  self.connection.getToken(self.secret, setToken=True)
 
 
@@ -80,6 +81,8 @@ class GraphGenerator:
 
             if (success_message in result) == False:
                 raise Exception("ERR: Create graph query execution failed.")
+            
+            self.graph_auto_created = True
             self.logger.info("create graph is completed.")
         else:
             self.logger.info("create graph is not executed because it is configured not to create.")
@@ -257,7 +260,7 @@ class GraphGenerator:
         existing_nodes = self.connection.getVertices(node_type, "", str.format('name="{}"', node_token['token']))
         node_id = ""
         if len(existing_nodes) > 0:
-            node_id = existing_nodes[0]['id']
+            node_id = existing_nodes[0]['v_id']
         else:
             node_count = self.connection.getVertexCount("*").values() #cannot rely on this fully. If we do async methods / do inserts from multiple clients, this will run into concurrency issues 
             node_id = sum(node_count) + 1 #generated with count for now. TODO: How else to reliably generate this id?

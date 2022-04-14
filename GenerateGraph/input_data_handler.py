@@ -104,6 +104,9 @@ class InputDataHandler :
                 if self.log_processed_records:
                     self.logger.info(str.format('processed: {}', ordered_word_list))
 
+                if index % 1000 == 0:
+                    self.logger.info(str.format('processed records count: {}', index))
+
             except Exception as ex:
                 self.logger.info(str.format("ERR: Error processing row {}. Content: {}", index, row[self.content_title]))
                 self.logger.debug(str.format("Error processing row {}. Content: {}", index, row[self.content_title]))
@@ -167,7 +170,7 @@ class InputDataHandler :
                 #add the relationship between the subject and object nodes
                 self.graph_generator.add_relationship_to_graph(subject_node_type, subject_node, relationship_name, object_node_type, object_node, relationship_attributes)
                 if self.log_processed_records:
-                    self.logger.info(str.format('{}({}) --> {} --> {}({})',  subject_node, subject_node_type, relationship_name, object_node,  object_node_type))
+                    self.logger.info(str.format('{}|{}({}) --> {} --> {}|{}({})', subject_token, subject_node, subject_node_type, relationship_name, object_token, object_node,  object_node_type))
 
     def setup_schema(self, domain_words_dict):
         """

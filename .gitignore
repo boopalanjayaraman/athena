@@ -4,3 +4,5 @@ __pycache__
 /GenerateGraph/configuration_dev.ini
 dslim
 /GenerateGraph/sample_pytigergraph.ipynb
+/domain_nouns_list.json
+/domain_verbs_list.json

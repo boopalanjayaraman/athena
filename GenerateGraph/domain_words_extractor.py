@@ -6,6 +6,8 @@ from collections import Counter
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import  word_tokenize, sent_tokenize
+import json
+import os.path
 
 nltk.download('stopwords')
 nltk.download('punkt')
@@ -31,6 +33,11 @@ class DomainWordsExtractor :
         self.use_optimal_most_common_count = (config['InputDataSettings']['UseOptimalMostCommonCount'] == 'True')
         self.common_word_coverage_percent = float(config['InputDataSettings']['CommonWordCoveragePercent'])
 
+        self.dump_domain_word_lists = (config['GeneralSettings']['DumpDomainWordLists'] == 'True')
+        self.preload_domain_word_lists = (config['GeneralSettings']['PreloadDomainWordLists'] == 'True')
+        self.domain_verb_list_path = config['GeneralSettings']['DomainVerbListPath']
+        self.domain_noun_list_path = config['GeneralSettings']['DomainNounListPath']
+
         if self.use_optimal_most_common_count and self.common_word_coverage_percent == 0.0:
            self.common_word_coverage_percent = 0.7 
 
@@ -43,6 +50,20 @@ class DomainWordsExtractor :
         """
         self.logger.info("extract_domain_words called.")
 
+        #check if preloaded domain words lists are available, if so deserialize them, load them, and return the dict
+        if self.preload_domain_word_lists:
+            if str.strip(self.domain_verb_list_path) != '' and str.strip(self.domain_noun_list_path) != '' and os.path.isfile(self.domain_verb_list_path) and os.path.isfile(self.domain_noun_list_path):
+                result_dict = {}
+                with open(self.domain_verb_list_path, 'r', encoding ='utf8') as verb_json_file_r:
+                    result_dict['VerbsList'] = json.load(verb_json_file_r)
+                with open(self.domain_noun_list_path, 'r', encoding ='utf8') as noun_json_file_r:
+                    result_dict['NounsList'] = json.load(noun_json_file_r)
+                result_dict['PropsList'] = []
+
+                self.logger.info("Loaded the extracted domain words from files (preload option).")
+                return result_dict
+
+        #else go on with the usual flow
         if input_file_path == None or input_file_path == '':
             input_file_path = self.config['InputDataSettings']['InputDataSetFile']
         
@@ -87,6 +108,19 @@ class DomainWordsExtractor :
         result_dict['VerbsList'] = [w[0] for w in verb_counter.most_common(optimal_most_common_verb_count)]
         result_dict['NounsList'] = [w[0] for w in noun_counter.most_common(optimal_most_common_noun_count)]
         result_dict['PropsList'] = [w[0] for w in prop_counter.most_common(optimal_most_common_prop_count)]
+
+        #dump the domain verbs and nouns if configured
+        if self.dump_domain_word_lists:
+            if str.strip(self.domain_verb_list_path) != '' and str.strip(self.domain_noun_list_path) != '':
+                with open(self.domain_verb_list_path, 'w', encoding ='utf8') as verb_json_file_w:
+                    json.dump(result_dict['VerbsList'], verb_json_file_w, allow_nan=True)
+                    self.logger.info(str.format("dumped the extracted domain verbs into a file. {}", self.domain_verb_list_path))
+
+                with open(self.domain_noun_list_path, 'w', encoding ='utf8') as noun_json_file_w:
+                    json.dump(result_dict['NounsList'], noun_json_file_w, allow_nan=True)
+                    self.logger.info(str.format("dumped the extracted domain nouns into a file. {}", self.domain_noun_list_path))
+                self.logger.info("dumped the extracted domain words into files.")
+                
 
         self.logger.info("extract_domain_words finished.")
         self.logger.info(str.format("VerbsList: {}, NounsList:{}, PropsList:{}", len(result_dict['VerbsList']), len(result_dict['NounsList']), len(result_dict['PropsList'])))

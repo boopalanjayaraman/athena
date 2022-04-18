@@ -9,7 +9,7 @@ class AttnDecoderRNN(nn.Module):
     This is the decoder part of the seq2seq model
     Uses the attention layer after embedding layer.
     '''
-    def __init__(self, hidden_size, output_size, device, dropout_p=0.1, max_length=30000):
+    def __init__(self, hidden_size, output_size, device, dropout_p=0.1, max_length=50):
         super(AttnDecoderRNN, self).__init__()
         self.hidden_size = hidden_size
         self.output_size = output_size

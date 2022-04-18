@@ -32,6 +32,8 @@ class TrainingPipeline:
         self.iterations = int(config['ModelSettings']['Iterations'])
         self.print_every = int(config['ModelSettings']['Print_Every'])
 
+        self.MAX_LENGTH = int(config['ModelSettings']['MAX_LENGTH'])
+
         self.seq2seq_model = None
 
 
@@ -44,12 +46,12 @@ class TrainingPipeline:
         
 
         # prepare encoder, decoder and the training seq2seq handler
-        encoder = EncoderRNN(input_sequence.n_words, self.hidden_size).to(self.device)
-        attn_decoder = AttnDecoderRNN(self.hidden_size, output_sequence.n_words, dropout_p= self.dropout).to(self.device)
+        encoder = EncoderRNN(input_sequence.n_words, self.hidden_size, self.device).to(self.device)
+        attn_decoder = AttnDecoderRNN(self.hidden_size, output_sequence.n_words, self.device, dropout_p= self.dropout, max_length=self.MAX_LENGTH).to(self.device)
         seq2seq_handler = Seq2Seq_RNN(self.config, self.logger, self.device, encoder, attn_decoder, input_sequence, output_sequence, pairs)
 
         # call the training iterations
-        seq2seq_handler.train_iters(encoder, attn_decoder, self.iterations, print_every=self.print_every)
+        seq2seq_handler.train_iters(self.iterations, print_every=self.print_every)
 
         # evaluate it
 
@@ -61,8 +63,8 @@ class TrainingPipeline:
         input_sequence, output_sequence, pairs = self.data_preprocessor.prepare_data(data_file_path)
 
         # prepare encoder, decoder and the training seq2seq handler
-        encoder = EncoderRNN(input_sequence.n_words, self.hidden_size).to(self.device)
-        attn_decoder = AttnDecoderRNN(self.hidden_size, output_sequence.n_words, dropout_p= self.dropout).to(self.device)
+        encoder = EncoderRNN(input_sequence.n_words, self.hidden_size, self.device).to(self.device)
+        attn_decoder = AttnDecoderRNN(self.hidden_size, output_sequence.n_words, self.device, dropout_p= self.dropout, max_length=self.MAX_LENGTH).to(self.device)
         seq2seq_handler = Seq2Seq_RNN(self.config, self.logger, self.device, encoder, attn_decoder, input_sequence, output_sequence, pairs)
 
         #load the saved models

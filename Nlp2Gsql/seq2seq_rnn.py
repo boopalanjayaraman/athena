@@ -5,6 +5,7 @@ import torch.optim as optim
 import time
 import random 
 import math
+from os import path
 
 class Seq2Seq_RNN:
 
@@ -71,8 +72,11 @@ class Seq2Seq_RNN:
                 plot_losses.append(plot_loss_avg)
                 plot_loss_total = 0
 
-        torch.save(encoder.state_dict(), self.encoder_model_file)
-        torch.save(decoder.state_dict(), self.decoder_model_file)
+        encoder_model_file_path = path.join(path.dirname(path.abspath(__file__)), self.encoder_model_file)
+        decoder_model_file_path = path.join(path.dirname(path.abspath(__file__)), self.decoder_model_file)
+
+        torch.save(encoder.state_dict(), encoder_model_file_path)
+        torch.save(decoder.state_dict(), decoder_model_file_path)
 
     def train(self, input_tensor, target_tensor, encoder_optimizer, decoder_optimizer, criterion):
 
@@ -207,5 +211,9 @@ class Seq2Seq_RNN:
 
 
     def load_saved_models(self):
-        self.encoder.load_state_dict(torch.load(self.encoder_model_file))
-        self.decoder.load_state_dict(torch.load(self.decoder_model_file))
+
+        encoder_model_file_path = path.join(path.dirname(path.abspath(__file__)), self.encoder_model_file)
+        decoder_model_file_path = path.join(path.dirname(path.abspath(__file__)), self.decoder_model_file)
+
+        self.encoder.load_state_dict(torch.load(encoder_model_file_path))
+        self.decoder.load_state_dict(torch.load(decoder_model_file_path))

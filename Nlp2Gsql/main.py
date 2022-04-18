@@ -5,7 +5,7 @@ from log_helper import logger
 from config_helper import config
 import numpy as np
 import pandas as pd
-
+from os import path
 
 def init():
     print('hello world! NLP 2 GSQL intermediary Language starting.')
@@ -14,16 +14,20 @@ def init():
     logger.info('config is working. TestConfig: %s ', config['GeneralSettings']['TestConfig'])
  
 
-def train_model_seq2seq():
+def train_model_seq2seq(train_model=True):
     logger.info('train_model_seq2seq is being invoked.')
 
     data_file = config['InputDataSettings']['InputDataSetFile']
+    data_file = path.join(path.dirname(path.abspath(__file__)), data_file)
 
     logger.info('creating a new training pipeline for seq2seq model.')
     training_pipeline = TrainingPipeline(logger, config)
-    training_pipeline.start_training(data_file)
+
+    if train_model:
+        logger.info('starting to train the seq2seq model.')
+        training_pipeline.start_training(data_file)
     
-    logger.info('loading the saved models')
+    logger.info('loading the saved encoder / decoder models.')
     training_pipeline.load_saved_models(data_file)
 
     logger.info('evaluating sample sentences')
@@ -44,5 +48,5 @@ def train_model_seq2seq():
 
 if __name__ == "__main__":
     init()
-    train_model_seq2seq()
+    train_model_seq2seq(True)
     

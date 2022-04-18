@@ -33,6 +33,8 @@ def read_data():
     #process the file
     logger.info('## starting to process the input data file.')
     input_data_handler.process_file()
+
+    logger.info('## processing input data file is finished.')
     
 
 if __name__ == "__main__":

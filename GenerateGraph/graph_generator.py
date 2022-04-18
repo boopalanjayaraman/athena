@@ -3,6 +3,7 @@ import logging
 import pyTigerGraph as tg
 import json
 import re #regex
+import datetime
 
 class GraphGenerator:
     """
@@ -175,13 +176,15 @@ class GraphGenerator:
         for node_info in node_infos:
             query_list.append(str.format('ADD VERTEX {} TO GRAPH {};', node_info['name'], self.graph_name))
 
+        job_suffix = datetime.datetime.now().strftime("_%Y_%m_%d_%H%M%S")
+
         add_nodes_query = "\n".join(query_list)
         add_nodes_query = """
         USE GLOBAL
-        CREATE GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name +""" {
+        CREATE GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name + job_suffix +""" {
         """ + add_nodes_query + """
         }
-        RUN GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name +"""
+        RUN GLOBAL SCHEMA_CHANGE JOB add_vertices_to_"""+ self.graph_name + job_suffix +"""
         """
         result = self.connection.gsql(add_nodes_query)
 
@@ -229,13 +232,15 @@ class GraphGenerator:
             relationship_name = GraphGenerator.get_relationship_name(relationship_info['name'])
             query_list.append(str.format('ADD EDGE {} TO GRAPH {}; ADD EDGE reverse_{} TO GRAPH {};', relationship_name, self.graph_name, relationship_name, self.graph_name))
 
+        job_suffix = datetime.datetime.now().strftime("_%Y_%m_%d_%H%M%S")
+
         add_relationships_query = "\n".join(query_list)
         add_relationships_query = """
         USE GLOBAL
-        CREATE GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name +""" {
+        CREATE GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name + job_suffix +""" {
         """ + add_relationships_query + """
         }
-        RUN GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name +"""
+        RUN GLOBAL SCHEMA_CHANGE JOB add_edges_to_"""+ self.graph_name + job_suffix +"""
         """
         result = self.connection.gsql(add_relationships_query)
 

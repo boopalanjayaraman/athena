@@ -7,7 +7,6 @@ import torch.optim as optim
 
 from tqdm import tqdm 
 from io import open
-from __future__ import unicode_literals, print_function, division
 
 from seq2seq_rnn import Seq2Seq_RNN
 from attention_decoder_rnn import AttnDecoderRNN

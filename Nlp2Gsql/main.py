@@ -44,4 +44,5 @@ def train_model_seq2seq():
 
 if __name__ == "__main__":
     init()
+    train_model_seq2seq()
     

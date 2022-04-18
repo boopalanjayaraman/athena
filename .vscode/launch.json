@@ -11,6 +11,14 @@
             "program": "${workspaceFolder}/GenerateGraph/main.py",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "Python: Train NLP 2 GSQL Intermediate",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/Nlp2Gsql/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }

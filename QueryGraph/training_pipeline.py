@@ -80,6 +80,8 @@ class TrainingPipeline:
         self.logger.info(str.format("input sentence: {}", input_sentence))
         self.logger.info(str.format("output sentence: {}", output_sentence))
 
+        output_sentence = str.strip(output_sentence.replace('<EOS>', ''))
+
         return output_sentence
 
     

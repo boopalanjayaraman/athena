@@ -26,6 +26,8 @@ def init():
     logger.info('logger is working')
     logger.info('config is working. TestConfig: %s ', config['GeneralSettings']['TestConfig'])
 
+    global query_pipeline
+
     if(query_pipeline == None):
         #prepare the extractors
         entity_extractor = EntityExtractor(config, logger)

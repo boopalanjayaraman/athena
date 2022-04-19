@@ -23,6 +23,7 @@ class GraphConnector:
         self.graph_name = self.config['GraphSettings']['GraphName']
         self.secret = ''
         self.api_token = ''
+        self.use_graph_executed = False
 
         self.connection = tg.TigerGraphConnection(host=self.host_name, username=self.user_name, password=self.password, graphname=self.graph_name, gsqlVersion="3.5.0", useCert=True)
 
@@ -34,11 +35,11 @@ class GraphConnector:
         # For the below statements to execute the graph should be created and available
         # create the secret
         self.secret = self.config['GraphSettings']['Secret'] 
-        if str.strip(self.secret) == '' or self.graph_auto_created == True:
+        if str.strip(self.secret) == '':
             self.secret = self.connection.createSecret()
 
         self.api_token = self.config['GraphSettings']['ApiToken'] 
-        if str.strip(self.api_token) == '' or self.graph_auto_created == True:
+        if str.strip(self.api_token) == '':
             self.api_token =  self.connection.getToken(self.secret, setToken=True)
 
 
@@ -62,6 +63,7 @@ class GraphConnector:
             raise Exception("ERR: Use graph query execution failed.")
         else:
             self.logger.info("Graph exists. Using it.")
+            self.use_graph_executed = True
  
 
     def get_relationship_name(verb_token):
@@ -77,6 +79,12 @@ class GraphConnector:
         """
         self.logger.info("use graph is being called.")
         self.logger.info(str.format("INPUT GSQL: {}", gsql))
+
+        if str.strip(str(self.api_token)) == '':
+            self.initialize_token()
+        
+        if self.use_graph_executed == False:
+            self.use_graph()
 
         result = self.connection.gsql(gsql)
         return result

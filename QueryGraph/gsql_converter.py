@@ -28,7 +28,7 @@ class GsqlConverter:
         return final_gsql_without_params
 
 
-    def generate_gsql_from_intermediate_language(il):
+    def generate_gsql_from_intermediate_language(self, il):
         """
         This method converts the parameterized intermediate language coming from the seq2seq model that converts plain NLP questions.
         intermediate language format samples - 
@@ -62,14 +62,14 @@ class GsqlConverter:
             condition_token = conditions_stack[index]
 
             if unit_token.startswith('VERTEX'):
-                vertex_token = VertexToken(unit_token, condition_token, item_index)
+                vertex_token = VertexToken(unit_token, condition_token, item_index, condition_str_operator_dict, condition_str_variable_dict)
                 output_str, condition_str, item_alias = vertex_token.get_string()
                 current_format.append('V')
                 current_units.append((output_str, condition_str)) #tuple
                 units_aliases.append(item_alias)
 
             elif unit_token.startswith('EDGE'):
-                edge_token = EdgeToken(unit_token, condition_token, item_index)
+                edge_token = EdgeToken(unit_token, condition_token, item_index, condition_str_operator_dict, condition_str_variable_dict)
                 output_str, condition_str, item_alias = edge_token.get_string()
                 current_format.append('E')
                 current_units.append((output_str, condition_str)) #tuple

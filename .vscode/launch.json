@@ -19,6 +19,14 @@
             "program": "${workspaceFolder}/Nlp2Gsql/main.py",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "Python: Run NLP Query Service",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/QueryGraph/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }

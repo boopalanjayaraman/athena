@@ -13,6 +13,8 @@ from entity_extractor import EntityExtractor
 from query_pipeline import QueryPipeline
 from log_helper import logger
 from config_helper import config
+import json
+from flask import jsonify
 
 
 app = Flask(__name__)
@@ -63,7 +65,7 @@ def query_graph_nlp():
     result = query_pipeline.process_nlp_query(query)
 
     return result
-
+ 
 '''
 ping method
 '''

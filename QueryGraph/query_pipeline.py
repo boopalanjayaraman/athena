@@ -37,8 +37,16 @@ class QueryPipeline:
 
         #pass the gsql to graph connector to run the query and get the results
         result = self.graph_connector.run_gsql(gsql=gsql)
-        result_obj = json.loads(result)
-
+        result_obj = {}
+        try:
+            #conver to json
+            result_obj = json.loads(result)
+            result_obj = { 'results': result_obj['results'] }
+        except Exception as ex:
+            self.logger.info(str.format("Error processing NLP query {}.", query))
+            self.logger.error('Error:', exc_info=ex)
+            self.logger.info(str.format("Result from gsql execution: {}.", result))
+            result_obj['results'] = {'error': result}
         #return the result in json
         return result_obj
 

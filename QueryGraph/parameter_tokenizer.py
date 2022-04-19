@@ -30,8 +30,7 @@ class ParameterTokenizer:
         #parameterizing the years
         question_content, params_dict = self.parameterize_years(question_content, params_dict)
 
-        ## handle year special cases - "5 years ago", etc.
-        self.special_cases_handler.handle_parameters(params_dict)
+        ## TODO: handle year special cases - "5 years ago", etc.
 
         return question_content, params_dict
 

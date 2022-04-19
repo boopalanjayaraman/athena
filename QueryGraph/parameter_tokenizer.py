@@ -1,4 +1,5 @@
 
+from special_cases_handler import SpecialCasesHandler
 from pos_extractor import PosExtractor
 from entity_extractor import EntityExtractor
 import re
@@ -14,6 +15,7 @@ class ParameterTokenizer:
         self.entity_extractor = entity_extractor
         self.pos_extractor = pos_extractor
         self.logger.info('Initialized ParameterTokenizer.')
+        self.special_cases_handler = SpecialCasesHandler(self.logger, self.config)
 
     def parameterize(self, query):
         self.logger.info("ParameterTokenizer: parameterize method is called")
@@ -28,7 +30,8 @@ class ParameterTokenizer:
         #parameterizing the years
         question_content, params_dict = self.parameterize_years(question_content, params_dict)
 
-        ## TODO: handle year special cases - "5 years ago", etc.
+        ## handle year special cases - "5 years ago", etc.
+        self.special_cases_handler.handle_parameters(params_dict)
 
         return question_content, params_dict
 

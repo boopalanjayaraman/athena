@@ -45,15 +45,15 @@ who all did {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CON
 {ORGANIZATION} has been {VERB} by who exactly,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
 {ORGANIZATION} have been {VERB} by who exactly,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
 {ORGANIZATION} had been {VERB} by who exactly,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who is currently {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-{ORGANIZATION} {VERB} currently by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-currently {ORGANIZATION} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-currently who is {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who is {VERB} {ORGANIZATION} now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-{ORGANIZATION} {VERB} now by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-now {ORGANIZATION} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-now who is {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
-{VERB} {ORGANIZATION} by who now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who is currently {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+{ORGANIZATION} {VERB} currently by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+currently {ORGANIZATION} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+currently who is {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who is {VERB} {ORGANIZATION} now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+{ORGANIZATION} {VERB} now by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+now {ORGANIZATION} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+now who is {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
+{VERB} {ORGANIZATION} by who now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION name = {ORGANIZATION}
 what happen with {ORGANIZATION} in the year {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what happen with {ORGANIZATION} in the year {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what happen with {ORGANIZATION} in the year {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
@@ -63,11 +63,11 @@ what has happen to {ORGANIZATION} in {YEAR},VERTEX Organization | CONDITION name
 what was happen with {ORGANIZATION} in {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what were happen with {ORGANIZATION} in {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what was {ORGANIZATION} like in {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
-what is {ORGANIZATION} like now,VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
-what do {ORGANIZATION} look like now,VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
+what is {ORGANIZATION} like now,VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
+what do {ORGANIZATION} look like now,VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
 what do {ORGANIZATION} look like in {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
-what is happen with {ORGANIZATION},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
-what is happen at {ORGANIZATION},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
+what is happen with {ORGANIZATION},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
+what is happen at {ORGANIZATION},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
 everything about {ORGANIZATION},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION any | VERTEX any | CONDITION any
 about {ORGANIZATION},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION any | VERTEX any | CONDITION any
 about {ORGANIZATION} in {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
@@ -457,6 +457,26 @@ did {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} |
 has {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
 had {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
 have {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+what {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what was {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what is {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what are {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what has {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what have {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what had {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what do {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what does {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+what did {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+did {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+was {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+is {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+are {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+has {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+have {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+had {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+do {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+does {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
+did {PERSON} {VERB},VERTEX Person | CONDITION name = {PERSON} | EDGE {VERB} | VERTEX any | CONDITION any
 what happen with {PERSON} in the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what happen with {PERSON} in the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what happen with {PERSON} in the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
@@ -466,11 +486,11 @@ what has happen to {PERSON} in {YEAR},VERTEX Person | CONDITION name = {PERSON} 
 what was happen with {PERSON} in {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what were happen with {PERSON} in {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what was {PERSON} like in {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
-what is {PERSON} like now,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
-what do {PERSON} look like now,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
+what is {PERSON} like now,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
+what do {PERSON} look like now,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
 what do {PERSON} look like in {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
-what is happen with {PERSON},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
-what is happen at {PERSON},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
+what is happen with {PERSON},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
+what is happen at {PERSON},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
 everything about {PERSON},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION any | VERTEX any | CONDITION any
 about {PERSON},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION any | VERTEX any | CONDITION any
 about {PERSON} in {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
@@ -681,11 +701,11 @@ what has happen to {LOCATION} in {YEAR},VERTEX Location | CONDITION name = {LOCA
 what was happen with {LOCATION} in {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what were happen with {LOCATION} in {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
 what was {LOCATION} like in {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
-what is {LOCATION} like now,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
-what do {LOCATION} look like now,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
+what is {LOCATION} like now,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
+what do {LOCATION} look like now,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
 what do {LOCATION} look like in {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
-what is happen with {LOCATION},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
-what is happen at {LOCATION},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened = now | VERTEX any | CONDITION any
+what is happen with {LOCATION},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
+what is happen at {LOCATION},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = now | VERTEX any | CONDITION any
 everything about {LOCATION},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION any | VERTEX any | CONDITION any
 about {LOCATION},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION any | VERTEX any | CONDITION any
 about {LOCATION} in {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any | CONDITION any
@@ -983,15 +1003,15 @@ who all is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VE
 who all was {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
 who all had {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
 who all did {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who is currently {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-{VERB} currently by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-currently  {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-currently who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-who is {VERB} now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-{VERB} now by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-now {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-now who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
-{VERB} by who now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = now | VERTEX Organization | CONDITION any
+who is currently {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+{VERB} currently by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+currently  {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+currently who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+who is {VERB} now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+{VERB} now by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+now {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+now who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
+{VERB} by who now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
 who is {VERB} in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
 {VERB} by who in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
 in the year {YEAR} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any

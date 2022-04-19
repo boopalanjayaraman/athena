@@ -15,7 +15,12 @@ class GsqlConverter:
     def get_gsql(self, il) -> str:
         gsql_dict, final_edge_alias = self.generate_gsql_from_intermediate_language(il)
         # get the format of gsql
-        final_gsql_format = gsql_format_degree_mapping[len(gsql_dict.keys())]['select']
+        final_gsql_format = ''
+        if il.startswith('OPERATION COUNT'):
+            # special case handling
+            final_gsql_format = gsql_format_degree_mapping[len(gsql_dict.keys())]['count']
+        else:    
+            final_gsql_format = gsql_format_degree_mapping[len(gsql_dict.keys())]['select']
 
         gsql_strings = [ self.graph_name ]
         for index in range(len(gsql_dict.keys())):
@@ -44,6 +49,8 @@ class GsqlConverter:
             il_token = str.strip(il_token)
             if il_token.startswith('CONDITION'):
                 conditions_stack.append(il_token)
+            elif il_token.startswith('OPERATION'):
+                continue
             else:
                 units_stack.append(il_token)
 

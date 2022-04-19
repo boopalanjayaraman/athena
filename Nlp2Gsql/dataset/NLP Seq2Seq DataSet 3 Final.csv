@@ -179,24 +179,24 @@ what was {ORGANIZATION} like on {DATE},VERTEX Organization | CONDITION name = {O
 what do {ORGANIZATION} look like on {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 how did {ORGANIZATION} do on {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 how was {ORGANIZATION} on {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
-what happen with {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen with {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen to {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was happen with {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what were happen with {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was {ORGANIZATION} like between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what do {ORGANIZATION} look like between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how did {ORGANIZATION} do between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how was {ORGANIZATION} on between years {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what happen with {ORGANIZATION} between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen with {ORGANIZATION} between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen to {ORGANIZATION} between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was happen with {ORGANIZATION} between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what were happen with {ORGANIZATION} between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was {ORGANIZATION} like between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what do {ORGANIZATION} look like between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how did {ORGANIZATION} do between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how was {ORGANIZATION} on between {YEAR 1} and {YEAR 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
+what happen with {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen with {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen to {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was happen with {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what were happen with {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was {ORGANIZATION} like between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what do {ORGANIZATION} look like between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how did {ORGANIZATION} do between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how was {ORGANIZATION} on between years {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what happen with {ORGANIZATION} between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen with {ORGANIZATION} between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen to {ORGANIZATION} between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was happen with {ORGANIZATION} between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what were happen with {ORGANIZATION} between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was {ORGANIZATION} like between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what do {ORGANIZATION} look like between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how did {ORGANIZATION} do between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how was {ORGANIZATION} on between {YEAR1} and {YEAR2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
 what happen with {ORGANIZATION} after the year {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
 what has happen with {ORGANIZATION} after the year {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
 what has happen to {ORGANIZATION} after the year {YEAR},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
@@ -224,15 +224,15 @@ what was {ORGANIZATION} like after the date {DATE},VERTEX Organization | CONDITI
 what do {ORGANIZATION} look like after the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how did {ORGANIZATION} do after the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how was {ORGANIZATION} after the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
-what happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {ORGANIZATION} like between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {ORGANIZATION} look like between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {ORGANIZATION} do between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {ORGANIZATION} on between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
+what happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {ORGANIZATION} like between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {ORGANIZATION} look like between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {ORGANIZATION} do between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {ORGANIZATION} on between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
 what happen with {ORGANIZATION} on or after {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 what has happen with {ORGANIZATION} on or after {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 what has happen to {ORGANIZATION} on or after {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
@@ -242,33 +242,33 @@ what was {ORGANIZATION} like on or after {DATE},VERTEX Organization | CONDITION 
 what do {ORGANIZATION} look like on or after {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how did {ORGANIZATION} do on or after {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how was {ORGANIZATION} on or after {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
-what happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {ORGANIZATION} between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {ORGANIZATION} like between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {ORGANIZATION} look like between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {ORGANIZATION} do between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {ORGANIZATION} on between dates {DATE 1} and {DATE 2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what happen with {ORGANIZATION} between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {ORGANIZATION} between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {ORGANIZATION} between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {ORGANIZATION} between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {ORGANIZATION} between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {ORGANIZATION} like between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {ORGANIZATION} look like between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {ORGANIZATION} do between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {ORGANIZATION} on between the date {DATE} and the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what happen with {ORGANIZATION} from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {ORGANIZATION} from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {ORGANIZATION} from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {ORGANIZATION} from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {ORGANIZATION} from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {ORGANIZATION} like from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {ORGANIZATION} look like from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {ORGANIZATION} do from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {ORGANIZATION} on from the date {DATE} to the date {DATE},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
+what happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {ORGANIZATION} between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {ORGANIZATION} like between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {ORGANIZATION} look like between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {ORGANIZATION} do between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {ORGANIZATION} on between dates {DATE1} and {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what happen with {ORGANIZATION} between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {ORGANIZATION} between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {ORGANIZATION} between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {ORGANIZATION} between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {ORGANIZATION} between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {ORGANIZATION} like between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {ORGANIZATION} look like between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {ORGANIZATION} do between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {ORGANIZATION} on between the date {DATE1} and the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what happen with {ORGANIZATION} from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {ORGANIZATION} from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {ORGANIZATION} from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {ORGANIZATION} from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {ORGANIZATION} from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {ORGANIZATION} like from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {ORGANIZATION} look like from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {ORGANIZATION} do from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {ORGANIZATION} on from the date {DATE1} to the date {DATE2},VERTEX Organization | CONDITION name = {ORGANIZATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
 is {ORGANIZATION} {VERB} ,VERTEX Organization | CONDITION  name = {ORGANIZATION} | EDGE {VERB} | CONDITION any | VERTEX any
 was {ORGANIZATION} {VERB},VERTEX Organization | CONDITION  name = {ORGANIZATION} | EDGE {VERB} | CONDITION any | VERTEX any
 were {ORGANIZATION} {VERB},VERTEX Organization | CONDITION  name = {ORGANIZATION} | EDGE {VERB} | CONDITION any | VERTEX any
@@ -306,102 +306,102 @@ had {ORGANIZATION} {VERB} in the state {LOCATION},VERTEX Organization | CONDITIO
 are {ORGANIZATION} {VERB} in the state {LOCATION},VERTEX Organization | CONDITION  name = {ORGANIZATION} | EDGE {VERB} | CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
 how are {ORGANIZATION} and {LOCATION} related,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 how are {ORGANIZATION} and {PERSON} related,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-how are {ORGANIZATION 1} and {ORGANIZATION 2} related,VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-how are {PERSON 1} and {PERSON 2} related,VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+how are {ORGANIZATION1} and {ORGANIZATION2} related,VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+how are {PERSON1} and {PERSON2} related,VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 how are {ORGANIZATION} and {LOCATION} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 how are {ORGANIZATION} and {PERSON} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-how are {ORGANIZATION 1} and {ORGANIZATION 2} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-how are {PERSON 1} and {PERSON 2} connected,VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+how are {ORGANIZATION1} and {ORGANIZATION2} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+how are {PERSON1} and {PERSON2} connected,VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 how related are {ORGANIZATION} and {LOCATION},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 how related are {ORGANIZATION} and {PERSON},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-how related are {ORGANIZATION 1} and {ORGANIZATION 2} ,VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-how related are {PERSON 1} and {PERSON 2},VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+how related are {ORGANIZATION1} and {ORGANIZATION2} ,VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+how related are {PERSON1} and {PERSON2},VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 how connected are {ORGANIZATION} and {LOCATION},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 how connected are {ORGANIZATION} and {PERSON},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-how connected are {ORGANIZATION 1} and {ORGANIZATION 2} ,VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-how connected are {PERSON 1} and {PERSON 2},VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+how connected are {ORGANIZATION1} and {ORGANIZATION2} ,VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+how connected are {PERSON1} and {PERSON2},VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 are {ORGANIZATION} and {LOCATION} related,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 are {ORGANIZATION} and {PERSON} related,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-are {ORGANIZATION 1} and {ORGANIZATION 2} related,VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-are {PERSON 1} and {PERSON 2} related,VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+are {ORGANIZATION1} and {ORGANIZATION2} related,VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+are {PERSON1} and {PERSON2} related,VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 are {ORGANIZATION} and {LOCATION} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 are {ORGANIZATION} and {PERSON} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-are {ORGANIZATION 1} and {ORGANIZATION 2} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-are {PERSON 1} and {PERSON 2} connected,VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+are {ORGANIZATION1} and {ORGANIZATION2} connected,VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+are {PERSON1} and {PERSON2} connected,VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 is {ORGANIZATION} related to {LOCATION} ,VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 is {ORGANIZATION} related to {PERSON},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-is {ORGANIZATION 1} related to {ORGANIZATION 2},VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-is {PERSON 1} related to {PERSON 2},VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
+is {ORGANIZATION1} related to {ORGANIZATION2},VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+is {PERSON1} related to {PERSON2},VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
 is {ORGANIZATION} connected to {LOCATION},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Location | CONDITION name = {LOCATION}
 is {ORGANIZATION} connected to {PERSON},VERTEX Organization | CONDITION  name = {ORGANIZATION} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON}
-is {ORGANIZATION 1} connected to {ORGANIZATION 2},VERTEX Organization | CONDITION  name = {ORGANIZATION 1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-is {PERSON 1} connected to {PERSON 2},VERTEX Person | CONDITION  name = {PERSON 1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON 2}
-who {VERB 1} in organizations that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in organizations that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in organizations that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in companies that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in companies that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in companies that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in institutions that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in institutions that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in institutions that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in businesses that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in businesses that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in businesses that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in enterprises that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in enterprises that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in enterprises that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in divisions that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in divisions that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in divisions that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in branches that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in branches that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in branches that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in units that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in units that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in units that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in groups that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in groups that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in groups that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-who {VERB 1} in people that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB 1} in people that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-who {VERB 1} in people that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which companies {VERB 1} in organizations that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which companies {VERB 1} in organizations that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which companies {VERB 1} in organizations that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which companies {VERB 1} in companies that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which companies {VERB 1} in companies that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which companies {VERB 1} in companies that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which companies {VERB 1} in institutions that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which companies {VERB 1} in institutions that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which companies {VERB 1} in institutions that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which companies {VERB 1} in businesses that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which companies {VERB 1} in businesses that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which companies {VERB 1} in businesses that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which companies {VERB 1} in enterprises that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which companies {VERB 1} in enterprises that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which companies {VERB 1} in enterprises that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which companies {VERB 1} in people that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which companies {VERB 1} in people that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which companies {VERB 1} in people that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which organizations {VERB 1} in organizations that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which organizations {VERB 1} in organizations that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which organizations {VERB 1} in organizations that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which organizations {VERB 1} in companies that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which organizations {VERB 1} in companies that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which organizations {VERB 1} in companies that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which organizations {VERB 1} in institutions that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which organizations {VERB 1} in institutions that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which organizations {VERB 1} in institutions that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which organizations {VERB 1} in businesses that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which organizations {VERB 1} in businesses that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which organizations {VERB 1} in businesses that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which organizations {VERB 1} in enterprises that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which organizations {VERB 1} in enterprises that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which organizations {VERB 1} in enterprises that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-which organizations {VERB 1} in people that {VERB 2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-which organizations {VERB 1} in people that {VERB 2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-which organizations {VERB 1} in people that {VERB 2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+is {ORGANIZATION1} connected to {ORGANIZATION2},VERTEX Organization | CONDITION  name = {ORGANIZATION1} | OPERATION SHORTEST_PATH | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+is {PERSON1} connected to {PERSON2},VERTEX Person | CONDITION  name = {PERSON1} | OPERATION SHORTEST_PATH | VERTEX Person | CONDITION name = {PERSON2}
+who {VERB1} in organizations that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in organizations that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in organizations that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in companies that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in companies that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in companies that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in institutions that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in institutions that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in institutions that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in businesses that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in businesses that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in businesses that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in enterprises that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in enterprises that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in enterprises that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in divisions that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in divisions that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in divisions that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in branches that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in branches that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in branches that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in units that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in units that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in units that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in groups that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in groups that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in groups that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+who {VERB1} in people that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB1} in people that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+who {VERB1} in people that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which companies {VERB1} in organizations that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which companies {VERB1} in organizations that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which companies {VERB1} in organizations that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which companies {VERB1} in companies that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which companies {VERB1} in companies that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which companies {VERB1} in companies that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which companies {VERB1} in institutions that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which companies {VERB1} in institutions that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which companies {VERB1} in institutions that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which companies {VERB1} in businesses that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which companies {VERB1} in businesses that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which companies {VERB1} in businesses that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which companies {VERB1} in enterprises that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which companies {VERB1} in enterprises that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which companies {VERB1} in enterprises that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which companies {VERB1} in people that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which companies {VERB1} in people that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which companies {VERB1} in people that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which organizations {VERB1} in organizations that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which organizations {VERB1} in organizations that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which organizations {VERB1} in organizations that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which organizations {VERB1} in companies that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which organizations {VERB1} in companies that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which organizations {VERB1} in companies that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which organizations {VERB1} in institutions that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which organizations {VERB1} in institutions that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which organizations {VERB1} in institutions that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which organizations {VERB1} in businesses that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which organizations {VERB1} in businesses that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which organizations {VERB1} in businesses that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which organizations {VERB1} in enterprises that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which organizations {VERB1} in enterprises that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which organizations {VERB1} in enterprises that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+which organizations {VERB1} in people that {VERB2} in {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+which organizations {VERB1} in people that {VERB2} in {PERSON},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+which organizations {VERB1} in people that {VERB2} in {LOCATION},VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
 how many {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
 how many is {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
 how many was {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
@@ -410,53 +410,53 @@ how many has {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any 
 how many have {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
 how many had {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
 how many are {VERB} {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many {VERB 1} in organizations that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many are {VERB 1} in organizations that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many have {VERB 1} in organizations that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many were {VERB 1} in companies that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many are {VERB 1} in companies that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many have {VERB 1} in companies that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many were {VERB 1} in institutions that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many are {VERB 1} in institutions that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many have {VERB 1} in institutions that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many were {VERB 1} in businesses that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many {VERB 1} in businesses that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many are {VERB 1} in businesses that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many were {VERB 1} in enterprises that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many have {VERB 1} in enterprises that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many {VERB 1} in enterprises that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many are {VERB 1} in divisions that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many were {VERB 1} in divisions that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many have {VERB 1} in divisions that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many had {VERB 1} in branches that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many are {VERB 1} in branches that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many {VERB 1} in branches that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many were {VERB 1} in units that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many are {VERB 1} in units that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many have {VERB 1} in units that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many {VERB 1} in groups that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many are {VERB 1} in groups that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many were {VERB 1} in groups that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
-how many have {VERB 1} in people that {VERB 2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-how many had {VERB 1} in people that {VERB 2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
-how many {VERB 1} in people that {VERB 2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB 1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB 2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many {VERB1} in organizations that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many are {VERB1} in organizations that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many have {VERB1} in organizations that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many were {VERB1} in companies that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many are {VERB1} in companies that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many have {VERB1} in companies that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many were {VERB1} in institutions that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many are {VERB1} in institutions that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many have {VERB1} in institutions that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many were {VERB1} in businesses that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many {VERB1} in businesses that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many are {VERB1} in businesses that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many were {VERB1} in enterprises that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many have {VERB1} in enterprises that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many {VERB1} in enterprises that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many are {VERB1} in divisions that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many were {VERB1} in divisions that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many have {VERB1} in divisions that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many had {VERB1} in branches that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many are {VERB1} in branches that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many {VERB1} in branches that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many were {VERB1} in units that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many are {VERB1} in units that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many have {VERB1} in units that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many {VERB1} in groups that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many are {VERB1} in groups that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many were {VERB1} in groups that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Organization | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
+how many have {VERB1} in people that {VERB2} in {ORGANIZATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
+how many had {VERB1} in people that {VERB2} in {PERSON},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Person | CONDITION name = {PERSON}
+how many {VERB1} in people that {VERB2} in {LOCATION},OPERATION COUNT | VERTEX any | CONDITION any | EDGE {VERB1} | CONDITION any | VERTEX Person | CONDITION any | EDGE {VERB2} |CONDITION any | VERTEX Location | CONDITION name = {LOCATION}
 which {VERB} {ORGANIZATION},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION name = {ORGANIZATION}
-did {ORGANIZATION 1} {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-has {ORGANIZATION 1} {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-had {ORGANIZATION 1} {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-have {ORGANIZATION 1} {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-did {ORGANIZATION 1} ever {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-has {ORGANIZATION 1} ever {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-had {ORGANIZATION 1} ever {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-have {ORGANIZATION 1} ever {VERB} {ORGANIZATION 2},VERTEX Organization | CONDITION name = {ORGANIZATION 1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION 2}
-did {PERSON 1} {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-has {PERSON 1} {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-had {PERSON 1} {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-have {PERSON 1} {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-did {PERSON 1} ever {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-has {PERSON 1} ever {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-had {PERSON 1} ever {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
-have {PERSON 1} ever {VERB} {PERSON 2},VERTEX Person | CONDITION name = {PERSON 1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON 2}
+did {ORGANIZATION1} {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+has {ORGANIZATION1} {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+had {ORGANIZATION1} {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+have {ORGANIZATION1} {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+did {ORGANIZATION1} ever {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+has {ORGANIZATION1} ever {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+had {ORGANIZATION1} ever {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+have {ORGANIZATION1} ever {VERB} {ORGANIZATION2},VERTEX Organization | CONDITION name = {ORGANIZATION1} | EDGE {VERB} | VERTEX Organization | CONDITION name = {ORGANIZATION2}
+did {PERSON1} {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+has {PERSON1} {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+had {PERSON1} {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+have {PERSON1} {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+did {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+has {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+had {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
+have {PERSON1} ever {VERB} {PERSON2},VERTEX Person | CONDITION name = {PERSON1} | EDGE {VERB} | VERTEX Person | CONDITION name = {PERSON2}
 what happen with {PERSON} in the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any
 what happen with {PERSON} in the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any
 what happen with {PERSON} in the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year = {YEAR} | VERTEX any
@@ -519,24 +519,24 @@ what was {PERSON} like 10 years ago and before,VERTEX Person | CONDITION name = 
 what do {PERSON} look like 10 years ago and before,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= -10 | VERTEX any
 how did {PERSON} do 3 years ago and before,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= -3 | VERTEX any
 how was {PERSON} 3 years ago and before,VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= -3 | VERTEX any
-what happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen to {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what were happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was {PERSON} like before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what do {PERSON} look like before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how did {PERSON} do before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how was {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen to {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what were happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was {PERSON} like before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what do {PERSON} look like before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how did {PERSON} do before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how was {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
+what happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen to {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what were happen with {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was {PERSON} like before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what do {PERSON} look like before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how did {PERSON} do before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how was {PERSON} before the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen to {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what were happen with {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was {PERSON} like before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what do {PERSON} look like before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how did {PERSON} do before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how was {PERSON} before {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
 what happen with {PERSON} before the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 what has happen with {PERSON} before the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 what has happen to {PERSON} before the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
@@ -582,24 +582,24 @@ what was {PERSON} like on {DATE},VERTEX Person | CONDITION name = {PERSON} | EDG
 what do {PERSON} look like on {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 how did {PERSON} do on {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 how was {PERSON} on {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
-what happen with {PERSON} between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen with {PERSON} between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen to {PERSON} between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was happen with {PERSON} between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what were happen with {PERSON} between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was {PERSON} like between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what do {PERSON} look like between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how did {PERSON} do between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how was {PERSON} on between years {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what happen with {PERSON} between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen with {PERSON} between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen to {PERSON} between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was happen with {PERSON} between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what were happen with {PERSON} between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was {PERSON} like between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what do {PERSON} look like between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how did {PERSON} do between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how was {PERSON} on between {YEAR 1} and {YEAR 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
+what happen with {PERSON} between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen with {PERSON} between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen to {PERSON} between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was happen with {PERSON} between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what were happen with {PERSON} between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was {PERSON} like between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what do {PERSON} look like between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how did {PERSON} do between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how was {PERSON} on between years {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what happen with {PERSON} between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen with {PERSON} between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen to {PERSON} between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was happen with {PERSON} between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what were happen with {PERSON} between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was {PERSON} like between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what do {PERSON} look like between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how did {PERSON} do between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how was {PERSON} on between {YEAR1} and {YEAR2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
 what happen with {PERSON} after the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
 what has happen with {PERSON} after the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
 what has happen to {PERSON} after the year {YEAR},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
@@ -627,15 +627,15 @@ what was {PERSON} like after the date {DATE},VERTEX Person | CONDITION name = {P
 what do {PERSON} look like after the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how did {PERSON} do after the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how was {PERSON} after the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
-what happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {PERSON} like between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {PERSON} look like between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {PERSON} do between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {PERSON} on between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
+what happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {PERSON} like between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {PERSON} look like between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {PERSON} do between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {PERSON} on between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
 what happen with {PERSON} on or after {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 what has happen with {PERSON} on or after {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 what has happen to {PERSON} on or after {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
@@ -645,33 +645,33 @@ what was {PERSON} like on or after {DATE},VERTEX Person | CONDITION name = {PERS
 what do {PERSON} look like on or after {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how did {PERSON} do on or after {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how was {PERSON} on or after {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
-what happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {PERSON} between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {PERSON} like between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {PERSON} look like between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {PERSON} do between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {PERSON} on between dates {DATE 1} and {DATE 2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {PERSON} like between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {PERSON} look like between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {PERSON} do between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {PERSON} on between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {PERSON} like from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {PERSON} look like from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {PERSON} do from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {PERSON} on from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
+what happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {PERSON} between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {PERSON} like between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {PERSON} look like between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {PERSON} do between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {PERSON} on between dates {DATE1} and {DATE2},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {PERSON} between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {PERSON} like between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {PERSON} look like between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {PERSON} do between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {PERSON} on between the date {DATE} and the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {PERSON} from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {PERSON} like from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {PERSON} look like from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {PERSON} do from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {PERSON} on from the date {DATE} to the date {DATE},VERTEX Person | CONDITION name = {PERSON} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
 what happen with {LOCATION} in the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any
 what happen with {LOCATION} in the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any
 what happen with {LOCATION} in the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year = {YEAR} | VERTEX any
@@ -734,24 +734,24 @@ what was {LOCATION} like 10 years ago and before,VERTEX Location | CONDITION nam
 what do {LOCATION} look like 10 years ago and before,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= -10 | VERTEX any
 how did {LOCATION} do 3 years ago and before,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= -3 | VERTEX any
 how was {LOCATION} 3 years ago and before,VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= -3 | VERTEX any
-what happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen to {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what were happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was {LOCATION} like before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what do {LOCATION} look like before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how did {LOCATION} do before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how was {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what has happen to {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what were happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what was {LOCATION} like before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-what do {LOCATION} look like before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how did {LOCATION} do before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
-how was {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR 2} | VERTEX any
+what happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen to {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what were happen with {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was {LOCATION} like before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what do {LOCATION} look like before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how did {LOCATION} do before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how was {LOCATION} before the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what has happen to {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what were happen with {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what was {LOCATION} like before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+what do {LOCATION} look like before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how did {LOCATION} do before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
+how was {LOCATION} before {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year <= {YEAR2} | VERTEX any
 what happen with {LOCATION} before the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 what has happen with {LOCATION} before the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 what has happen to {LOCATION} before the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
@@ -797,24 +797,24 @@ what was {LOCATION} like on {DATE},VERTEX Location | CONDITION name = {LOCATION}
 what do {LOCATION} look like on {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 how did {LOCATION} do on {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
 how was {LOCATION} on {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened <= {DATE} | VERTEX any
-what happen with {LOCATION} between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen with {LOCATION} between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen to {LOCATION} between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was happen with {LOCATION} between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what were happen with {LOCATION} between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was {LOCATION} like between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what do {LOCATION} look like between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how did {LOCATION} do between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how was {LOCATION} on between years {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what happen with {LOCATION} between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen with {LOCATION} between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what has happen to {LOCATION} between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was happen with {LOCATION} between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what were happen with {LOCATION} between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what was {LOCATION} like between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-what do {LOCATION} look like between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how did {LOCATION} do between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
-how was {LOCATION} on between {YEAR 1} and {YEAR 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX any
+what happen with {LOCATION} between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen with {LOCATION} between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen to {LOCATION} between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was happen with {LOCATION} between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what were happen with {LOCATION} between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was {LOCATION} like between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what do {LOCATION} look like between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how did {LOCATION} do between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how was {LOCATION} on between years {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what happen with {LOCATION} between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen with {LOCATION} between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what has happen to {LOCATION} between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was happen with {LOCATION} between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what were happen with {LOCATION} between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what was {LOCATION} like between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+what do {LOCATION} look like between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how did {LOCATION} do between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
+how was {LOCATION} on between {YEAR1} and {YEAR2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any
 what happen with {LOCATION} after the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
 what has happen with {LOCATION} after the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
 what has happen to {LOCATION} after the year {YEAR},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION year >= {YEAR} | VERTEX any
@@ -842,15 +842,15 @@ what was {LOCATION} like after the date {DATE},VERTEX Location | CONDITION name 
 what do {LOCATION} look like after the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how did {LOCATION} do after the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how was {LOCATION} after the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
-what happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {LOCATION} like between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {LOCATION} look like between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {LOCATION} do between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {LOCATION} on between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
+what happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {LOCATION} like between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {LOCATION} look like between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {LOCATION} do between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {LOCATION} on between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
 what happen with {LOCATION} on or after {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 what has happen with {LOCATION} on or after {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 what has happen to {LOCATION} on or after {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
@@ -860,33 +860,33 @@ what was {LOCATION} like on or after {DATE},VERTEX Location | CONDITION name = {
 what do {LOCATION} look like on or after {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how did {LOCATION} do on or after {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
 how was {LOCATION} on or after {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE} | VERTEX any
-what happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {LOCATION} between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {LOCATION} like between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {LOCATION} look like between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {LOCATION} do between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {LOCATION} on between dates {DATE 1} and {DATE 2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {LOCATION} like between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {LOCATION} look like between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {LOCATION} do between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {LOCATION} on between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what has happen to {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what were happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what was {LOCATION} like from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-what do {LOCATION} look like from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how did {LOCATION} do from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
-how was {LOCATION} on from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX any
+what happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {LOCATION} between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {LOCATION} like between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {LOCATION} look like between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {LOCATION} do between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {LOCATION} on between dates {DATE1} and {DATE2},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {LOCATION} between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {LOCATION} like between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {LOCATION} look like between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {LOCATION} do between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {LOCATION} on between the date {DATE} and the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what has happen to {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what were happen with {LOCATION} from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what was {LOCATION} like from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+what do {LOCATION} look like from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how did {LOCATION} do from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
+how was {LOCATION} on from the date {DATE} to the date {DATE},VERTEX Location | CONDITION name = {LOCATION} | EDGE any | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX any
 who {VERB} {ORGANIZATION} in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who is {VERB} {ORGANIZATION} in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who was {VERB} {ORGANIZATION} in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
@@ -911,22 +911,22 @@ who has {VERB} {ORGANIZATION} 3 years ago,VERTEX any | CONDITION any | EDGE {VER
 who have {VERB} {ORGANIZATION} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who had {VERB} {ORGANIZATION} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who are {VERB} {ORGANIZATION} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who is {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who was {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who were {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who has {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who have {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who had {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who are {VERB} {ORGANIZATION} between years {YEAR 1} and {YEAR 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who is {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who was {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who were {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who has {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who have {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who had {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who are {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who is {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who was {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who were {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who has {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who have {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who had {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who are {VERB} {ORGANIZATION} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who is {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who was {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who were {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who has {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who have {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who had {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who are {VERB} {ORGANIZATION} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who is {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who was {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
@@ -935,14 +935,14 @@ who has {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any |
 who have {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who had {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who are {VERB} {ORGANIZATION} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who is {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who was {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who were {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who has {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who have {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who had {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who are {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR 1} AND year <= {YEAR 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who is {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who was {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who were {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who has {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who have {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who had {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who are {VERB} {ORGANIZATION} from the year {YEAR} to the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who {VERB} {ORGANIZATION} on or before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who is {VERB} {ORGANIZATION} on or before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who was {VERB} {ORGANIZATION} on or before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX Organization | CONDITION name = {ORGANIZATION}
@@ -959,11 +959,11 @@ who has {VERB} {ORGANIZATION} on or after the date {DATE},VERTEX any | CONDITION
 who have {VERB} {ORGANIZATION} on or after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who had {VERB} {ORGANIZATION} on or after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who are {VERB} {ORGANIZATION} on or after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who is {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who was {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who were {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who has {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who have {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who had {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who are {VERB} {ORGANIZATION} between the dates {DATE 1} and {DATE 2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE 1} AND happened <= {DATE 2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who is {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who was {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who were {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who has {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who have {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who had {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
+who are {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}

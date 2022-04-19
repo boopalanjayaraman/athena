@@ -35,8 +35,8 @@ def train_model_seq2seq(train_model=True):
     sample_sentences = ["who all did {VERB} {ORGANIZATION}",
     "who the did {VERB} {ORGANIZATION}", #changing the sentence framing a little
     "what the hell happen with {ORGANIZATION}", 
-    "how {PERSON 1} connected  {PERSON 2}",
-    "is the person {PERSON 1} related to the person {PERSON 2}"]
+    "how {PERSON1} connected  {PERSON2}",
+    "is the person {PERSON1} related to the person {PERSON2}"]
 
     for sentence in sample_sentences:
         output_sentence = training_pipeline.evaluate_saved_model(sentence)

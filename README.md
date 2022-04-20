@@ -130,18 +130,27 @@ Please open the workspace folder using Visual Studio Code. Select the Launch con
 ```SentencePatternRegex = E+V[EN]+``` Indicates the acceptable pattern of sentences that are eligible for graph relationships creation. Only sentences that satisfy this pattern will be used for creating nodes and relationships. E - denotes an entity (Organization, Location, Person, Object), V - denotes a Verb (found in the domain verbs list), N - denotes a noun (found in the domain nouns list)
 
 ```HostName = https://athena.i.tgcloud.io``` TigerGraph cloud host name
+
 ```UserName = tigergraph``` 
+
 ```Password = tigergraph``` 
+
 ```GraphName = athenagraph1304``` a graph name (either to be created newly or an existing one)
+
 ```CreateGraph = True``` When set to True, creates the graph (found in the graph name setting) if not exists.
+
 ```Secret = ``` If left blank, creates a secret and uses it. To save time between subsequent executions, we can create a secret and set it here.
+
 ```ApiToken = ``` If left blank, creates a new API token and uses it for calling TigerGraph API
 
 ```[InputDataSettings]```
 
 ```InputDataSetFile = data\raw_partner_headlines.csv``` the path of the input data set.
+
 ```ERConfidenceScore = 0.7``` used in entity recognition. Takes only those token classifications from BERT which have a confidence score of above 0.7. 
+
 ```ContentTitle = headline``` the title of column in the dataset that has the unstructured content
+
 ```DateTitle = date``` the title of column in the dataset that has the date
 
 ```CommonWordCoveragePercent = 0.7``` Indicates the degree of frequently used words in domain verbs and nouns. If we mention 0.7, that means 70% of the most frequently used verbs / nouns will be used for creating relationships and objects.
@@ -165,6 +174,7 @@ Open the workspace folder using Visual Studio Code. Select the Launch configurat
     Attention_Decoder_Model_file = saved_models\attn_decoder1-model.pt
 
 ```[InputDataSettings]```
+
     InputDataSetFile = dataset\NLP Seq2Seq DataSet 3 Final.csv
 
 The above settings are seq2seq model training configurations, and are mostly self-explanatory. You can increase or decrease Batch Size or Max length or Training Iterations. The encoder model and attention decoder models will be saved to the file path mentioned in the relevant configurations

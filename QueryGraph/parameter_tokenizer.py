@@ -6,7 +6,7 @@ import re
 
 class ParameterTokenizer:
 
-    year_regex = "(?:before)?(?:after)?(?:in)?(?:between)?(?:Year)?(?:YEAR)?(?:year)?(?:s)?\d\d\d\d\s"
+    year_regex = "\s(?:\d\d\d\d)"
     date_regex = "\d\d\d\d[/-]\d\d[/-]\d\d"
 
     def __init__(self, logger, config, entity_extractor : EntityExtractor, pos_extractor : PosExtractor) -> None:
@@ -26,7 +26,7 @@ class ParameterTokenizer:
         #parameterizing the verbs
         question_content, params_dict = self.parameterize_verbs(question_content, params_dict)
         #parameterizing the dates
-        question_content, params_dict = self.parameterize_dates(question_content, params_dict)
+        question_content, params_dict = self.parameterize_dates(question_content, params_dict) # order of this is IMPORTANT. Date should be regexed first, BEFORE THE YEAR. 
         #parameterizing the years
         question_content, params_dict = self.parameterize_years(question_content, params_dict)
 
@@ -72,21 +72,21 @@ class ParameterTokenizer:
             if entity_type == 'I-ORG' or entity_type == 'B-ORG':
                 if orgs_count > 1:
                     org_index += 1
-                    replace_token = str.format("{{{} {}}}", organization_suffix, org_index)
+                    replace_token = str.format("{{{}{}}}", organization_suffix, org_index)
                 else:
                     replace_token = str.format("{{{}}}", organization_suffix)
 
             elif entity_type == 'I-PER' or entity_type == 'B-PER':
                 if pers_count > 1:
                     pers_index += 1
-                    replace_token = str.format("{{{} {}}}", person_suffix, pers_index)
+                    replace_token = str.format("{{{}{}}}", person_suffix, pers_index)
                 else:
                     replace_token = str.format("{{{}}}", person_suffix)
 
             elif entity_type == 'I-LOC' or entity_type == 'B-LOC':
                 if locs_count > 1:
                     loc_index += 1
-                    replace_token = str.format("{{{} {}}}", location_suffix, loc_index)
+                    replace_token = str.format("{{{}{}}}", location_suffix, loc_index)
                 else:
                     replace_token = str.format("{{{}}}", location_suffix)
 
@@ -120,7 +120,7 @@ class ParameterTokenizer:
             if pos['pos'] == 'VERB':
                 if verbs_count > 1:
                     verb_index += 1
-                    replace_token = str.format("{{{} {}}}", verb_suffix, verb_index)
+                    replace_token = str.format("{{{}{}}}", verb_suffix, verb_index)
                 else:
                     replace_token = str.format("{{{}}}", verb_suffix)
 
@@ -141,6 +141,8 @@ class ParameterTokenizer:
         date_matches = re.split(ParameterTokenizer.date_regex, question_content)
         date_values = re.findall(ParameterTokenizer.date_regex, question_content)
 
+        new_question_content = date_matches[0]
+
         date_index = 0
         date_count = len(date_values)
         date_suffix = 'DATE'
@@ -149,24 +151,26 @@ class ParameterTokenizer:
             replace_token = ''
             if date_count > 1:
                 date_index += 1
-                replace_token = str.format("{{{} {}}}", date_suffix, date_index)
+                replace_token = str.format("{{{}{}}}", date_suffix, date_index)
             else:
                 replace_token = str.format("{{{}}}", date_suffix)
 
-            question_content +=  replace_token + date_matches[index+1]
+            new_question_content +=  replace_token + date_matches[index+1]
             if index == len(date_matches) -1:
                 break
             params_dict[replace_token] = str.format('"{}"', date_values[index])
 
         self.logger.info("parameterize_dates finished")
-        self.logger.info(str.format("parameterized_dates string: {}", question_content))
+        self.logger.info(str.format("parameterized_dates string: {}", new_question_content))
 
-        return question_content, params_dict
+        return new_question_content, params_dict
 
 
     def parameterize_years(self, question_content, params_dict):
         year_matches = re.split(ParameterTokenizer.year_regex, question_content)
         year_values = re.findall(ParameterTokenizer.year_regex, question_content)
+
+        new_question_content = year_matches[0]
 
         year_index = 0
         year_count = len(year_values)
@@ -176,19 +180,19 @@ class ParameterTokenizer:
             replace_token = ''
             if year_count > 1:
                 year_index += 1
-                replace_token = str.format("{{{} {}}}", year_suffix, year_index)
+                replace_token = str.format("{{{}{}}}", year_suffix, year_index)
             else:
                 replace_token = str.format("{{{}}}", year_suffix)
 
             next_match_string = year_matches[index+1] if year_matches[index+1].startswith(' ') else ' ' + year_matches[index+1]
-            question_content +=  replace_token + next_match_string
+            new_question_content += ' ' +  replace_token + next_match_string
             if index == len(year_matches) -1:
                 break
             params_dict[replace_token] = str.strip(year_values[index])
 
         self.logger.info("parameterize_years finished")
-        self.logger.info(str.format("parameterized_years string: {}", question_content))
+        self.logger.info(str.format("parameterized_years string: {}", new_question_content))
 
-        return question_content, params_dict
+        return new_question_content, params_dict
 
     

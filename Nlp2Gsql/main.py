@@ -36,7 +36,10 @@ def train_model_seq2seq(train_model=True):
     "who the did {VERB} {ORGANIZATION}", #changing the sentence framing a little
     "what the hell happen with {ORGANIZATION}", 
     "how {PERSON1} connected  {PERSON2}",
-    "is the person {PERSON1} related to the person {PERSON2}"]
+    "is the person {PERSON1} related to the person {PERSON2}",
+    "who had {VERB} the market between {YEAR1} and {YEAR2}",
+    "who is {PERSON}",
+    "which are {VERB}",]
 
     for sentence in sample_sentences:
         output_sentence = training_pipeline.evaluate_saved_model(sentence)

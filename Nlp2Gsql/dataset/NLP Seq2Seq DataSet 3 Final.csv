@@ -1003,37 +1003,207 @@ who has {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any |
 who have {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who had {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
 who are {VERB} {ORGANIZATION} between the dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened >= {DATE1} AND happened <= {DATE2} | VERTEX Organization | CONDITION name = {ORGANIZATION}
-who {VERB},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who was {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who were {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who has {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who have {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who had {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who are {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all were {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all are {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all have {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all was {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all had {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who all did {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX Organization | CONDITION any
-who is currently {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-{VERB} currently by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-currently  {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-currently who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-who is {VERB} now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-{VERB} now by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-now {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-now who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-{VERB} by who now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX Organization | CONDITION any
-who is {VERB} in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-{VERB} by who in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-in the year {YEAR} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-in the year {YEAR} who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-who is {VERB}  in {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-{VERB} in {YEAR} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-in {YEAR} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-in {YEAR} who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
-{VERB} by who in {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX Organization | CONDITION any
+who {VERB},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who was {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who were {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who has {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who have {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who had {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who are {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all were {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all are {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all have {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all was {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all had {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who all did {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION any | VERTEX any | CONDITION any
+who is currently {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+{VERB} currently by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+currently  {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+currently who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+who is {VERB} now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+{VERB} now by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+now {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+now who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+{VERB} by who now,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = now | VERTEX any | CONDITION any
+who is {VERB} in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+{VERB} by who in the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+in the year {YEAR} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+in the year {YEAR} who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+who is {VERB}  in {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+{VERB} in {YEAR} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+in {YEAR} {VERB} by who,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+in {YEAR} who is {VERB} ,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+{VERB} by who in {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = {YEAR} | VERTEX any | CONDITION any
+who {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who were {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who are {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who have {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who is {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who was {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who had {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who did {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+who {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who were {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who are {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who have {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who is {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who was {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who had {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who did {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+who {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who were {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who are {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who have {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who is {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who was {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who had {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who did {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+who were {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who are {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who have {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who is {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who was {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who had {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who did {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -10 | VERTEX any | CONDITION any
+who {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who were {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who are {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who have {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who is {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who was {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who had {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who did {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+who {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who were {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who are {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who have {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who is {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who was {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who had {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who did {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+who {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who were {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who are {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who have {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who is {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who was {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who had {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who did {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+who {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who were {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who are {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who have {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who is {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who was {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who had {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who did {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+who {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who were {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who are {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who have {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who is {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who was {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who had {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who did {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who were {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who are {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who have {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who is {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who was {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who had {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who did {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who were {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who are {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who have {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who is {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who was {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who had {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who did {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+who {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who were {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who are {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who have {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who is {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who was {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who had {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who did {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+who {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who were {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who are {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who have {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who is {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who was {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who had {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who did {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who were {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who are {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who have {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who is {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who was {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who had {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who did {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who were {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who are {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who have {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who is {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who was {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who had {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who did {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+who {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who were {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who are {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who have {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who is {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who was {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who had {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who did {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+who {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who were {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who are {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who have {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who is {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who was {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who had {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+who did {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+what {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+what {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+what {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+what {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+what {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+what {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+what {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+what {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+what {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+what {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+what {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+what {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+what {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+what {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+what {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+what {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+what {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+which {VERB} 5 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -5 | VERTEX any | CONDITION any
+which {VERB} 3 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -3 | VERTEX any | CONDITION any
+which {VERB} 1 year ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+which {VERB} 10 years ago,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year = -1 | VERTEX any | CONDITION any
+which {VERB} 5 years ago and before,VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year <= -5 | VERTEX any | CONDITION any
+which {VERB} before the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year < {YEAR} | VERTEX any | CONDITION any
+which {VERB} before the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened < {DATE} | VERTEX any | CONDITION any
+which {VERB} on or before {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened <= {DATE} | VERTEX any | CONDITION any
+which {VERB} between years {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+which {VERB} after the year {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+which {VERB} between {YEAR1} and {YEAR2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year >= {YEAR1} AND year <= {YEAR2} | VERTEX any | CONDITION any
+which {VERB} after {YEAR},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION year > {YEAR} | VERTEX any | CONDITION any
+which {VERB} after the date {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+which {VERB} between dates {DATE1} and {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any
+which {VERB} on or after {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened > {DATE} | VERTEX any | CONDITION any
+which {VERB} on {DATE},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened = {DATE} | VERTEX any | CONDITION any
+which {VERB} between the date {DATE1} and the date {DATE2},VERTEX any | CONDITION any | EDGE {VERB} | CONDITION happened => {DATE1} AND happened <= {DATE2} | VERTEX any | CONDITION any

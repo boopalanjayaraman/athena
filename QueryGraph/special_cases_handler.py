@@ -6,8 +6,9 @@ class SpecialCasesHandler:
 
     year_now_condition_regex = 'year\s?=\s?(now)\s?'
     year_ago_condition_regex = 'year\s?=\s?(-\d+)\s?'
+    year_ago_and_before_condition_regex = 'year\s?<=\s?(-\d+)\s?'
 
-    year_special_cases_patterns = [ {'search_pattern' :year_now_condition_regex, 'replace_pattern': 'year = {}'}, {'search_pattern' :year_ago_condition_regex, 'replace_pattern': 'year = {}'}]
+    year_special_cases_patterns = [ {'search_pattern' :year_now_condition_regex, 'replace_pattern': 'year = {}'}, {'search_pattern' :year_ago_condition_regex, 'replace_pattern': 'year = {}'}, {'search_pattern' :year_ago_and_before_condition_regex, 'replace_pattern': 'year <= {}'}]
 
     def __init__(self, logger, config) -> None:
         self.logger = logger

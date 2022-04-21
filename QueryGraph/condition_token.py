@@ -1,3 +1,6 @@
+from special_cases_handler import SpecialCasesHandler
+
+
 class ConditionToken:
   def __init__(self, condition_token, item_index, item_prefix, condition_str_operator_dict, condition_str_variable_dict):
     self.condition_token = condition_token
@@ -7,8 +10,11 @@ class ConditionToken:
     self.item_prefix = item_prefix
     self.condition_str_variable_dict = condition_str_variable_dict
     self.condition_str_operator_dict = condition_str_operator_dict
+    
 
   def get_string(self) -> str:
+    #handle special cases in the year string
+    self.condition_token = SpecialCasesHandler.handle_special_case_condition(self.condition_token)
     #process condition strings
     cond_tokens = self.condition_token.split(' ')
 
